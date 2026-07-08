@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Climatizadores Evaporativos Portáteis | Chiller Peças</title>
+<link rel="icon" type="image/svg+xml" href="Manual de Marca/favicon.ico.svg">
+<meta name="description" content="Climatizadores evaporativos portáteis Chiller Peças. Economia de até 90% comparado ao ar-condicionado. Motor WEG, certificação INMETRO, fabricação nacional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ───────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#085ba7;
+  --blue-light:#108bd1;
+  --blue-deep:#063d6e;
+  --orange:#ff901c;
+  --green-wa:#25D366;
+  --green-wa-hover:#1fb855;
+  --bg-body:#ffffff;
+  --bg-alt:#efefef;
+  --text:#1a1a2e;
+  --text-muted:#4a4a5a;
+  --neutral-100:#f5f5f5;
+  --neutral-200:#e0e0e0;
+  --neutral-300:#c0c0c0;
+  --neutral-800:#2a2a2a;
+  --white:#fff;
+  --font-heading:'Anton',sans-serif;
+  --font-body:'Quicksand',sans-serif;
+  --header-h:64px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+body{
+  font-family:var(--font-body);
+  font-weight:400;
+  color:var(--text);
+  background:var(--bg-body);
+  line-height:1.6;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.125rem);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+h1,h2,h3{
+  font-family:var(--font-heading);
+  text-wrap:balance;
+  line-height:1.1;
+}
+h1{font-size:clamp(2rem,1.4rem + 3vw,3.75rem);font-weight:400;letter-spacing:0.01em;text-transform:uppercase}
+h2{font-size:clamp(1.6rem,1.2rem + 2vw,2.75rem);font-weight:400;letter-spacing:0.01em;text-transform:uppercase}
+h3{font-size:clamp(1.15rem,1rem + 0.75vw,1.5rem);font-weight:400;text-transform:uppercase}
+p{max-width:62ch}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* ── UTILITY ────────────────────────────────────── */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(1rem,3vw,2.5rem)}
+
+/* ── CTA BUTTON ─────────────────────────────────── */
+.cta-wa{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  background:var(--green-wa);color:var(--white);
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(0.95rem,0.9rem + 0.25vw,1.1rem);
+  padding:0.85rem 1.8rem;border-radius:6px;
+  min-height:48px;
+  transition:background 0.2s,transform 0.15s;
+  text-decoration:none;
+}
+.cta-wa:hover,.cta-wa:focus-visible{background:var(--green-wa-hover);transform:translateY(-1px)}
+.cta-wa:active{transform:translateY(0)}
+.cta-wa svg{width:22px;height:22px;flex-shrink:0}
+
+/* ── HEADER ─────────────────────────────────────── */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:var(--header-h);
+  background:var(--blue-deep);
+  display:flex;align-items:center;
+  transition:box-shadow 0.3s;
+  border-bottom:3px solid var(--orange);
+}
+.site-header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,0.1)}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;max-width:1280px;margin:0 auto;
+  padding:0 clamp(1rem,3vw,2.5rem);
+}
+.logo{
+  font-family:var(--font-heading);font-weight:400;
+  color:var(--white);font-size:1.15rem;
+  display:flex;align-items:center;gap:0.5rem;
+  white-space:nowrap;
+}
+.logo span{opacity:0.6;font-weight:600;font-size:0.85em}
+.header-nav{display:none;gap:1.8rem}
+.header-nav a{
+  color:rgba(255,255,255,0.75);font-size:0.9rem;font-weight:600;
+  transition:color 0.2s;
+}
+.header-nav a:hover{color:var(--white)}
+.header-cta-wrap .cta-wa{padding:0.55rem 1.2rem;font-size:0.88rem;min-height:40px}
+.menu-toggle{display:flex;flex-direction:column;gap:5px;padding:8px;cursor:pointer;background:none;border:none}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--white);border-radius:1px;transition:0.3s}
+
+@media(min-width:768px){
+  .header-nav{display:flex}
+  .menu-toggle{display:none}
+}
+
+/* Mobile menu */
+.mobile-menu{
+  position:fixed;top:var(--header-h);left:0;right:0;
+  background:var(--blue-deep);
+  padding:1rem 1.5rem 1.5rem;
+  display:none;flex-direction:column;gap:0.25rem;
+  z-index:99;
+  border-top:1px solid rgba(8,91,167,0.2);
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  color:rgba(255,255,255,0.75);font-size:1rem;font-weight:600;
+  padding:0.75rem 0;
+  border-bottom:1px solid rgba(8,91,167,0.1);
+  transition:color 0.2s;
+}
+.mobile-menu a:hover{color:var(--white)}
+
+/* ── HERO ───────────────────────────────────────── */
+.hero{
+  min-height:calc(100vh - var(--header-h) - 52px);
+  min-height:calc(100dvh - var(--header-h) - 52px);
+  background:var(--blue);
+  display:flex;align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding-top:var(--header-h);
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr;
+  width:100%;max-width:1280px;margin:0 auto;
+  padding:clamp(1.5rem,3vw,2.5rem) clamp(1rem,3vw,2.5rem);
+  position:relative;z-index:2;
+}
+.hero-content{
+  display:flex;flex-direction:column;
+  justify-content:center;
+  gap:1.5rem;
+}
+.hero h1{color:var(--white);max-width:14ch}
+.hero-subtitle{
+  color:rgba(255,255,255,0.7);
+  font-size:clamp(1rem,0.9rem + 0.5vw,1.25rem);
+  font-weight:400;max-width:38ch;
+}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.35rem;
+  background:var(--orange);
+  color:var(--white);
+  font-family:var(--font-body);font-weight:600;
+  font-size:0.8rem;
+  padding:0.35rem 0.85rem;border-radius:100px;
+  backdrop-filter:blur(4px);
+}
+.hero-badge svg{width:14px;height:14px;opacity:0.85}
+.hero-cta-group{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center}
+.hero-cta-group .cta-wa{font-size:clamp(1rem,0.95rem + 0.25vw,1.15rem);padding:1rem 2rem}
+.hero-img-wrap{
+  position:relative;
+  margin-top:2rem;
+  display:flex;justify-content:flex-end;
+}
+.hero-img-wrap img{
+  width:100%;max-width:520px;
+  border-radius:8px 8px 0 0;
+  object-fit:cover;
+  aspect-ratio:4/3;
+}
+
+@media(min-width:1024px){
+  .hero-inner{grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+  .hero-img-wrap{
+    position:absolute;right:-2rem;bottom:0;
+    width:55%;max-width:680px;
+    margin-top:0;
+  }
+  .hero-img-wrap img{
+    max-width:100%;aspect-ratio:auto;
+    border-radius:8px 0 0 0;
+    height:85vh;object-position:center;
+  }
+}
+
+/* ── TRUST BAR ──────────────────────────────────── */
+.trust-bar{
+  background:var(--blue-deep);
+  padding:1.25rem 0;
+  border-top:1px solid rgba(8,91,167,0.2);
+}
+.trust-bar-inner{
+  display:flex;flex-wrap:wrap;
+  justify-content:center;align-items:center;
+  gap:1.5rem 2.5rem;
+}
+.trust-item{
+  display:flex;align-items:center;gap:0.5rem;
+  color:rgba(255,255,255,0.65);
+  font-family:var(--font-heading);font-weight:400;
+  font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;
+}
+.trust-item svg{width:20px;height:20px;opacity:0.7}
+
+/* ── DIFERENCIAIS ───────────────────────────────── */
+.diferenciais{background:var(--bg-body);padding:clamp(3rem,6vw,6rem) 0}
+.section-label{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;
+  color:var(--orange);margin-bottom:0.75rem;
+}
+.diferenciais h2{margin-bottom:clamp(1.5rem,3vw,3rem)}
+
+.diff-grid-legacy{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1px;
+  background:var(--neutral-200);
+  border-radius:8px;
+  overflow:hidden;
+}
+.diff-item{
+  background:var(--white);
+  padding:clamp(1.25rem,2vw,2rem);
+  display:flex;flex-direction:column;gap:0.6rem;
+}
+.diff-item-icon{
+  width:44px;height:44px;
+  background:var(--blue);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--white);flex-shrink:0;
+}
+.diff-item-icon svg{width:22px;height:22px}
+.diff-item h3{font-size:1.05rem}
+.diff-item p{font-size:0.92rem;color:var(--text-muted);max-width:45ch}
+
+/* Featured diff item */
+.diff-item.featured{
+  background:var(--blue);
+  color:var(--white);
+}
+.diff-item.featured p{color:rgba(255,255,255,0.7)}
+.diff-item.featured .diff-item-icon{background:#108bd1}
+
+@media(min-width:640px){
+  .diff-grid{grid-template-columns:1fr 1fr}
+  .diff-item.featured{grid-column:1 / -1}
+}
+@media(min-width:1024px){
+  .diff-grid{grid-template-columns:repeat(3,1fr)}
+  .diff-item.featured{grid-column:1 / 3;flex-direction:row;align-items:flex-start;gap:1.5rem}
+}
+
+/* ── EDUCATIVA ──────────────────────────────────── */
+.educativa{
+  background:var(--blue);
+  color:var(--white);
+  padding:clamp(3rem,6vw,6rem) 0;
+}
+.educativa-inner{
+  display:grid;grid-template-columns:1fr;gap:2rem;
+  align-items:center;
+}
+.educativa h2{color:var(--white)}
+.educativa-text p{color:rgba(255,255,255,0.7);margin-bottom:1rem}
+.educativa-text p:last-child{margin-bottom:0}
+.educativa-highlight{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(2.5rem,2rem + 3vw,5rem);
+  color:var(--white);
+  line-height:1;letter-spacing:-0.02em;
+}
+.educativa-highlight small{
+  display:block;font-size:0.3em;font-weight:600;
+  color:rgba(255,255,255,0.5);letter-spacing:0;
+  margin-top:0.5rem;
+}
+.spec-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  margin-top:1.5rem;
+  border-radius:6px;overflow:hidden;
+}
+.spec-strip-item{
+  flex:1 1 140px;
+  background:#074a8a;
+  padding:1rem 1.25rem;
+  border-right:1px solid rgba(8,91,167,0.2);
+}
+.spec-strip-item:last-child{border-right:none}
+.spec-strip-item .spec-val{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(1.5rem,1.2rem + 1.5vw,2.25rem);
+  color:var(--white);line-height:1.1;
+}
+.spec-strip-item .spec-label{
+  font-size:0.78rem;color:rgba(255,255,255,0.55);
+  font-weight:600;margin-top:0.15rem;
+}
+
+@media(min-width:1024px){
+  .educativa-inner{grid-template-columns:1fr 1fr;gap:4rem}
+}
+
+/* ── MODELOS ────────────────────────────────────── */
+.modelos{background:var(--bg-body);padding:clamp(3rem,6vw,6rem) 0}
+.modelos h2{margin-bottom:0.5rem}
+.modelos .section-desc{color:var(--text-muted);margin-bottom:clamp(1.5rem,3vw,3rem)}
+
+.model-list{display:flex;flex-direction:column;gap:1px;background:var(--neutral-200);border-radius:8px;overflow:hidden}
+.model-row{
+  background:var(--white);
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  transition:background 0.2s;
+}
+.model-row:hover{background:#f7f9fc}
+.model-img{
+  aspect-ratio:4/3;overflow:hidden;
+  background:var(--neutral-100);
+  display:flex;align-items:center;justify-content:center;
+}
+.model-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.model-row:hover .model-img img{transform:scale(1.03)}
+.model-info{
+  padding:clamp(1.25rem,2vw,2rem);
+  display:flex;flex-direction:column;gap:0.75rem;
+}
+.model-name{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(1.3rem,1.1rem + 1vw,1.75rem);
+  color:var(--blue);
+}
+.model-tagline{font-size:0.92rem;color:var(--text-muted)}
+.model-specs{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-radius:6px;overflow:hidden;
+  margin:0.25rem 0;
+}
+.model-spec{
+  flex:1 1 100px;
+  background:var(--blue);
+  padding:0.75rem 1rem;
+  border-right:1px solid rgba(8,91,167,0.2);
+}
+.model-spec:last-child{border-right:none}
+.model-spec .spec-val{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:1.2rem;color:var(--white);line-height:1.2;
+}
+.model-spec .spec-label{font-size:0.72rem;color:rgba(255,255,255,0.55);font-weight:600;margin-top:0.1rem}
+.model-cta{margin-top:auto;padding-top:0.5rem}
+.model-cta .cta-wa{width:100%;justify-content:center}
+
+@media(min-width:768px){
+  .model-row{grid-template-columns:280px 1fr}
+  .model-cta .cta-wa{width:auto}
+}
+@media(min-width:1024px){
+  .model-row{grid-template-columns:320px 1fr auto;align-items:center}
+  .model-cta{padding:2rem;margin-top:0}
+}
+
+/* ── APLICACOES ─────────────────────────────────── */
+.aplicacoes{
+  background:var(--blue);
+  color:var(--white);
+  padding:clamp(3rem,6vw,6rem) 0;
+}
+.aplicacoes h2{color:var(--white);margin-bottom:0.5rem}
+.aplicacoes .section-desc{color:rgba(255,255,255,0.6);margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+
+.app-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:clamp(0.5rem,1vw,0.75rem);
+}
+.app-card{
+  position:relative;
+  border-radius:8px;
+  overflow:hidden;
+  aspect-ratio:3/2;
+}
+.app-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.5s ease;
+}
+.app-card:hover img{transform:scale(1.05)}
+.app-card-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,30,55,0.85) 0%,transparent 60%);
+  display:flex;align-items:flex-end;
+  padding:clamp(0.75rem,1.5vw,1.5rem);
+}
+.app-card-overlay span{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(0.85rem,0.75rem + 0.5vw,1.1rem);
+  color:var(--white);
+}
+
+@media(min-width:640px){.app-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){
+  .app-grid{grid-template-columns:repeat(3,1fr)}
+  .app-card:first-child{grid-row:1/3;aspect-ratio:auto}
+}
+
+/* ── PROVA SOCIAL ───────────────────────────────── */
+.prova-social{background:var(--bg-alt);padding:clamp(3rem,6vw,6rem) 0}
+.prova-social h2{margin-bottom:clamp(1.5rem,3vw,3rem)}
+
+.testimonials{display:grid;grid-template-columns:1fr;gap:clamp(1rem,2vw,1.5rem)}
+.testimonial{
+  background:var(--white);
+  border-radius:8px;
+  overflow:hidden;
+  display:grid;grid-template-columns:1fr;
+}
+.testimonial-img{
+  aspect-ratio:16/9;overflow:hidden;
+  background:var(--neutral-100);
+}
+.testimonial-img img{width:100%;height:100%;object-fit:cover}
+.testimonial-body{padding:clamp(1.25rem,2vw,2rem);display:flex;flex-direction:column;gap:0.75rem}
+.testimonial-stars{display:flex;gap:2px;color:#ff901c}
+.testimonial-stars svg{width:16px;height:16px}
+.testimonial-quote{font-size:0.95rem;color:var(--text);font-style:italic;line-height:1.6}
+.testimonial-author{font-family:var(--font-heading);font-weight:400;font-size:0.88rem;color:var(--blue)}
+.testimonial-meta{font-size:0.8rem;color:var(--text-muted)}
+
+@media(min-width:768px){
+  .testimonials{grid-template-columns:repeat(2,1fr)}
+  .testimonial:first-child{grid-column:1/-1;grid-template-columns:1fr 1fr}
+  .testimonial:first-child .testimonial-img{aspect-ratio:auto}
+}
+
+/* ── FAQ ────────────────────────────────────────── */
+.faq{
+  background:var(--blue);
+  color:var(--white);
+  padding:clamp(3rem,6vw,6rem) 0;
+}
+.faq h2{color:var(--white);margin-bottom:clamp(1.5rem,3vw,3rem)}
+
+.faq-list{
+  max-width:800px;
+  display:flex;flex-direction:column;
+}
+.faq-item{border-bottom:1px solid rgba(8,91,167,0.25)}
+.faq-item:first-child{border-top:1px solid rgba(8,91,167,0.25)}
+.faq-trigger{
+  width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.15rem 0;
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(0.95rem,0.9rem + 0.25vw,1.1rem);
+  color:var(--white);
+  cursor:pointer;
+  background:none;border:none;text-align:left;
+  gap:1rem;
+  min-height:48px;
+}
+.faq-trigger:hover{color:#ff901c}
+.faq-chevron{
+  width:20px;height:20px;flex-shrink:0;
+  transition:transform 0.3s;
+  color:rgba(255,255,255,0.5);
+}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-answer{
+  display:grid;grid-template-rows:0fr;overflow:hidden;
+  transition:grid-template-rows 0.35s ease;
+}
+.faq-item.open .faq-answer{grid-template-rows:1fr}
+.faq-answer-inner{
+  padding:0 0 1.25rem;
+  color:rgba(255,255,255,0.6);
+  font-size:0.95rem;
+  line-height:1.7;
+}
+
+/* ── CTA FINAL ──────────────────────────────────── */
+.cta-final{background:var(--bg-body);padding:clamp(3rem,6vw,6rem) 0}
+.cta-final-inner{
+  display:grid;grid-template-columns:1fr;gap:clamp(2rem,4vw,3rem);
+  align-items:start;
+}
+.cta-final h2{margin-bottom:0.75rem}
+.cta-final-text p{color:var(--text-muted);margin-bottom:1.5rem}
+
+.contact-form{
+  background:var(--white);
+  border-radius:8px;
+  padding:clamp(1.5rem,3vw,2.5rem);
+  box-shadow:0 1px 3px rgba(8,91,167,0.08);
+}
+.form-title{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:1.15rem;margin-bottom:1.25rem;
+}
+.form-group{margin-bottom:1rem}
+.form-group label{
+  display:block;font-weight:600;font-size:0.85rem;
+  color:var(--text-muted);margin-bottom:0.35rem;
+}
+.form-group input,.form-group select{
+  width:100%;
+  padding:0.7rem 0.9rem;
+  border:1.5px solid var(--neutral-300);
+  border-radius:6px;
+  font-family:var(--font-body);
+  font-size:0.95rem;
+  color:var(--text);
+  background:var(--bg-body);
+  transition:border-color 0.2s;
+  min-height:48px;
+}
+.form-group input:focus,.form-group select:focus{
+  outline:none;
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(8,91,167,0.15);
+}
+.form-submit{
+  width:100%;margin-top:0.5rem;
+}
+
+@media(min-width:1024px){
+  .cta-final-inner{grid-template-columns:1fr 1fr}
+}
+
+/* ── FOOTER ─────────────────────────────────────── */
+.site-footer{
+  background:var(--blue-deep);
+  color:rgba(255,255,255,0.55);
+  padding:clamp(2rem,4vw,3rem) 0;
+}
+.footer-inner{
+  display:grid;grid-template-columns:1fr;gap:1.5rem;
+}
+.footer-brand{
+  font-family:var(--font-heading);font-weight:400;
+  color:var(--white);font-size:1.1rem;margin-bottom:0.5rem;
+}
+.footer-info p{font-size:0.88rem;line-height:1.6;margin-bottom:0.25rem}
+.footer-links{display:flex;flex-direction:column;gap:0.35rem}
+.footer-links a{font-size:0.88rem;transition:color 0.2s}
+.footer-links a:hover{color:var(--white)}
+.footer-copy{
+  margin-top:1.5rem;padding-top:1rem;
+  border-top:1px solid rgba(8,91,167,0.25);
+  font-size:0.8rem;color:rgba(255,255,255,0.4);
+}
+@media(min-width:768px){
+  .footer-inner{grid-template-columns:2fr 1fr 1fr}
+}
+
+/* ── STICKY MOBILE CTA ──────────────────────────── */
+.sticky-cta{
+  position:fixed;bottom:0;left:0;right:0;
+  background:var(--white);
+  padding:0.75rem 1rem;
+  box-shadow:0 -2px 8px rgba(0,0,0,0.08);
+  z-index:90;
+  display:none;
+  border-top:1px solid var(--neutral-200);
+}
+.sticky-cta .cta-wa{width:100%;justify-content:center;font-size:1rem}
+.sticky-cta.visible{display:block}
+
+@media(min-width:768px){
+  .sticky-cta{display:none !important}
+}
+
+/* ── ANIMATIONS ─────────────────────────────────── */
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity 0.6s ease,transform 0.6s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.slide-right{
+  opacity:0;
+  transform:translateX(60px);
+  transition:opacity 0.4s ease,transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.slide-right.visible{opacity:1;transform:translateX(0)}
+
+/* ── BADGE POPULAR ──────────────────────────────── */
+.badge-popular{
+  display:inline-block;
+  background:#ff901c;color:#fff;
+  font-family:var(--font-heading);font-weight:400;
+  font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;
+  padding:0.3rem 0.85rem;border-radius:100px;
+  width:fit-content;
+}
+
+/* ── ECONOMY CALLOUT ───────────────────────────── */
+.economy-callout{
+  background:var(--orange);color:var(--white);
+  border-radius:8px;padding:clamp(1.25rem,2vw,2rem);
+  text-align:center;margin-top:0.5rem;
+}
+.economy-callout .economy-number{
+  font-family:var(--font-heading);font-weight:400;
+  font-size:clamp(3rem,2.5rem + 3vw,5rem);
+  line-height:1;display:block;
+}
+.economy-callout .economy-label{
+  font-size:clamp(0.9rem,0.85rem + 0.25vw,1.05rem);
+  font-weight:600;margin-top:0.35rem;display:block;
+  opacity:0.9;
+}
+
+/* ── CTA HELPER TEXT ───────────────────────────── */
+.cta-helper{
+  font-size:0.88rem;color:var(--text-muted);
+  margin-top:0.75rem;max-width:42ch;
+  font-style:italic;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal,.slide-right{opacity:1;transform:none;transition:none}
+  .model-img img{transition:none}
+  .app-card img{transition:none}
+  .faq-chevron{transition:none}
+  .faq-answer{transition:none}
+  .cta-wa{transition:none}
+  [data-count]{transition:none}
+}
+
+/* ── DIFERENCIAIS HERO (from LP4) ── */
+.diferenciais-hero{padding:clamp(2rem,4vw,3rem) 0 clamp(4px,0.5vw,8px)}
+@media(min-width:768px){.diff-hero-top{grid-template-columns:1fr 1fr !important}}
+.hero-headline{font-size:clamp(28px,5vw,52px);font-weight:400;letter-spacing:0.02em;color:var(--text);max-width:18ch;text-transform:uppercase;margin-bottom:12px}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--text-muted);max-width:52ch;margin-bottom:clamp(28px,4vw,48px);line-height:1.5}
+.install-strip{display:flex;gap:16px;overflow:hidden;margin:0 -20px;padding:0 0 16px;position:relative}
+.install-strip-track{display:flex;gap:16px;animation:marquee 25s linear infinite;width:max-content}
+.install-strip:hover .install-strip-track{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.install-card{flex:0 0 260px;border-radius:10px;overflow:hidden;background:var(--white);border:1px solid #e8e8e8}
+.install-card img{width:260px;height:170px;object-fit:cover}
+.install-card figcaption{padding:10px 14px;font-size:13px;font-weight:600;color:var(--text-muted);font-family:var(--font-body)}
+.hero-product{margin-top:clamp(32px,5vw,56px);display:flex;flex-direction:column;align-items:center;gap:clamp(24px,4vw,40px)}
+.hero-product img{max-width:380px;width:100%}
+.cta-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green-wa);color:var(--white);font-family:var(--font-body);font-weight:700;font-size:clamp(16px,2vw,18px);padding:0 32px;height:48px;min-height:48px;border-radius:10px;transition:background 0.15s;text-align:center}
+.cta-primary:hover{background:var(--green-wa-hover)}
+.cta-primary svg{width:22px;height:22px;fill:currentColor;flex-shrink:0}
+.cta-secondary{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:var(--blue);font-family:var(--font-body);font-weight:700;font-size:15px;padding:0 32px;height:48px;min-height:48px;border-radius:10px;border:2px solid var(--blue);transition:background 0.15s,color 0.15s}
+.cta-secondary:hover{background:var(--blue);color:var(--white)}
+
+/* ── ECONOMIA SECTION (from LP4) ── */
+.diff-section{padding:clamp(32px,5vw,56px) 0}
+#economia.diff-section{background:var(--bg-alt);padding-top:clamp(20px,3vw,36px)}
+.diff-section .diff-grid{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,48px)}
+@media(min-width:768px){.diff-section .diff-grid{grid-template-columns:1fr 1fr;align-items:center}}
+.diff-label{font-family:var(--font-heading);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;color:var(--blue);margin-bottom:12px}
+.diff-title{font-size:clamp(22px,3.5vw,36px);font-weight:400;letter-spacing:0.02em;text-transform:uppercase;margin-bottom:16px}
+.diff-text{font-size:clamp(15px,1.8vw,17px);color:var(--text-muted);max-width:62ch;line-height:1.65;margin-bottom:20px}
+.diff-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.diff-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--text)}
+.diff-list li::before{content:'';display:block;width:20px;height:20px;flex-shrink:0;margin-top:2px;background:var(--green-wa);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M8.5 13.3 5.2 10l1.1-1.1 2.2 2.2 4.8-4.8 1.1 1.1z'/%3E%3C/svg%3E");background-size:20px}
+.diff-visual img{border-radius:12px;width:100%}
+.num-highlight{display:inline-flex;align-items:baseline;gap:8px;font-family:var(--font-heading);font-weight:400;font-size:clamp(40px,6vw,60px);color:var(--orange);margin-bottom:8px;text-shadow:0 2px 12px rgba(255,144,28,0.18)}
+.num-highlight .unit{font-size:clamp(16px,2vw,22px);font-weight:700;color:var(--text-muted)}
+
+/* ── MODELS SECTION (from LP4) ── */
+.models-section{background:var(--bg-alt);padding:clamp(48px,8vw,96px) 0}
+.models-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.model-card{background:var(--white);border:1px solid #e8e8e8;border-radius:12px;padding:24px;text-align:center;transition:border-color 0.15s;position:relative;display:flex;flex-direction:column}
+.cta-model{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;font-family:var(--font-body);font-weight:700;font-size:0.9rem;padding:12px 20px;border-radius:8px;margin-top:auto;transition:background 0.2s;text-decoration:none;min-height:44px}
+.cta-model:hover{background:#1da851}
+.model-card:hover{border-color:var(--blue)}
+.model-badge{position:absolute;top:12px;right:12px;background:var(--orange);color:var(--white);font-family:var(--font-body);font-weight:700;font-size:12px;padding:5px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.04em;z-index:2}
+.model-card img{width:100%;max-width:200px;margin:0 auto 16px;aspect-ratio:1;object-fit:contain}
+.model-card .model-name{font-family:var(--font-heading);font-weight:400;font-size:20px;margin-bottom:4px;text-transform:uppercase}
+.model-cap{font-size:14px;color:var(--text-muted);margin-bottom:12px}
+.model-card .model-specs{list-style:none;text-align:left;font-size:14px;color:var(--text-muted);display:flex;flex-direction:column;gap:6px;border-top:1px solid #e8e8e8;padding-top:12px}
+.model-card .model-specs li{display:flex;justify-content:space-between}
+.model-card .model-specs li strong{color:var(--text);font-weight:600}
+
+/* ── COMPARISON TABLE (from LP3) ── */
+.comparison{padding:clamp(3rem,6vw,5rem) 0}
+.comparison-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1rem,3vw,2.5rem)}
+.comparison h2{font-size:clamp(1.6rem,1.2rem + 2vw,2.75rem);font-weight:400;letter-spacing:0.01em;text-transform:uppercase;text-align:center;margin-bottom:2rem}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.comparison table{width:100%;border-collapse:collapse;min-width:600px}
+.comparison thead th{background:var(--blue);color:#fff;font-family:var(--font-heading);font-weight:700;font-size:0.85rem;padding:0.85rem 1rem;text-align:left;text-transform:uppercase;letter-spacing:0.04em}
+.comparison thead th:first-child{border-radius:6px 0 0 0}
+.comparison thead th:last-child{border-radius:0 6px 0 0}
+.comparison tbody td{padding:0.8rem 1rem;border-bottom:1px solid #e8e8e8;font-size:0.85rem;vertical-align:top}
+.comparison tbody tr:hover{background:#f5f5f5}
+.comparison tbody td:first-child{font-weight:600;color:var(--text)}
+.comparison .highlight-col{background:#f5f5f5}
+
+/* ── APLICACOES SECTION (from LP5) ── */
+.aplicacoes-section{padding:clamp(3rem,6vw,6rem) 0}
+.aplicacoes-section h2{margin-bottom:0.5rem}
+.aplicacoes-intro{color:var(--text-muted);margin-bottom:2.5rem}
+.aplicacoes-grid{display:grid;gap:1rem}
+@media(min-width:600px){.aplicacoes-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.aplicacoes-grid{grid-template-columns:repeat(3,1fr)}}
+.aplicacao-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:3/2}
+.aplicacao-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease}
+.aplicacao-card:hover img{transform:scale(1.04)}
+.aplicacao-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(4,45,84,0.85) 0%,transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem}
+.aplicacao-tag{font-family:var(--font-heading);font-weight:400;text-transform:uppercase;font-size:0.65rem;letter-spacing:0.08em;color:#ffb05c;margin-bottom:0.3rem}
+.aplicacao-name{font-family:var(--font-heading);font-weight:400;font-size:1.1rem;color:#fff;margin-bottom:0.2rem;text-transform:uppercase}
+.aplicacao-spec{font-size:0.8rem;color:#a3d5ef}
+
+/* ── SOCIAL SECTION (from LP5) ── */
+.social-section{padding:clamp(3rem,6vw,6rem) 0;background:var(--blue);color:#f0f4f8}
+.social-section h2{color:#f0f4f8;margin-bottom:2.5rem}
+.social-grid{display:grid;gap:1.5rem}
+@media(min-width:768px){.social-grid{grid-template-columns:repeat(3,1fr)}}
+.social-card{background:rgba(10,111,190,0.35);border-radius:10px;padding:1.5rem;border:1px solid rgba(16,139,209,0.25)}
+.social-stars{color:var(--orange);font-size:0.85rem;margin-bottom:0.75rem;letter-spacing:2px}
+.social-quote{font-size:0.95rem;line-height:1.55;color:#d1eaf7;margin-bottom:1rem;font-style:italic}
+.social-author{font-family:var(--font-heading);font-weight:400;font-size:0.85rem;color:#f0f4f8;text-transform:uppercase}
+.social-role{font-size:0.78rem;color:#6dbde5;margin-top:0.15rem}
+.section-label-light{color:#ffb05c}
+
+/* ── FAQ SECTION (from LP4) ── */
+.faq-section{background:var(--white);border-top:1px solid #e8e8e8;padding:clamp(48px,8vw,96px) 0}
+.faq-section .diff-label{text-align:center;margin-bottom:8px}
+.faq-section .diff-title{text-align:center;max-width:22ch;margin:0 auto clamp(28px,4vw,48px)}
+.faq-section .faq-list{max-width:720px;margin:0 auto}
+.faq-section .faq-item{border-bottom:1px solid #e8e8e8}
+.faq-section .faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:20px 0;font-family:var(--font-body);font-weight:700;font-size:clamp(15px,2vw,17px);cursor:pointer;list-style:none}
+.faq-section .faq-item summary::-webkit-details-marker{display:none}
+.faq-section .faq-item summary::after{content:'+';font-size:24px;font-weight:600;color:var(--blue);transition:transform 0.2s}
+.faq-section .faq-item[open] summary::after{content:'\2212';transform:none}
+.faq-section .faq-answer{padding:0 0 20px;font-size:15px;color:var(--text-muted);line-height:1.65;max-width:62ch}
+
+/* ── CTA SECTION (from LP5) ── */
+.cta-section{padding:clamp(3rem,6vw,6rem) 0;background:var(--blue);color:#f0f4f8}
+.cta-section h2{color:#f0f4f8;margin-bottom:0.5rem}
+.cta-subtitle{color:#a3d5ef;margin-bottom:2.5rem}
+.cta-layout{display:grid;gap:2.5rem}
+@media(min-width:768px){.cta-layout{grid-template-columns:1fr 1fr;gap:3rem}}
+.cta-whatsapp-block{display:flex;flex-direction:column;justify-content:center}
+.cta-whatsapp-block p{color:#a3d5ef;margin-bottom:1.5rem;font-size:1.05rem}
+.cta-helper{font-size:0.88rem;color:rgba(255,255,255,0.6);margin-top:0.75rem;max-width:42ch;font-style:italic}
+.cta-form{background:rgba(12,125,204,0.3);border-radius:10px;padding:2rem;border:1px solid rgba(16,139,209,0.3)}
+.cta-form label{display:block;font-family:var(--font-heading);font-weight:400;text-transform:uppercase;font-size:0.78rem;letter-spacing:0.04em;color:#a3d5ef;margin-bottom:0.35rem}
+.cta-form input,.cta-form select,.cta-form textarea{width:100%;padding:0.7rem 0.9rem;border-radius:6px;border:1px solid rgba(16,139,209,0.4);background:rgba(255,255,255,0.95);color:var(--text);font-family:var(--font-body);font-size:0.95rem;margin-bottom:1rem;transition:border-color 0.2s ease}
+.cta-form input:focus,.cta-form select:focus,.cta-form textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,144,28,0.2)}
+.cta-form textarea{resize:vertical;min-height:80px}
+.cta-form .btn-primary{width:100%;justify-content:center}
+.btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--green-wa);color:#fff;font-family:var(--font-body);font-weight:700;font-size:clamp(0.95rem,0.9rem + 0.25vw,1.1rem);padding:0.85rem 2rem;border-radius:10px;min-height:48px;border:none;cursor:pointer;transition:background 0.2s ease,transform 0.15s ease}
+.btn-primary:hover{background:var(--green-wa-hover);transform:translateY(-2px)}
+.btn-primary svg{width:20px;height:20px;flex-shrink:0}
+
+/* ── NEW FOOTER ── */
+.site-footer{background:#063d6e;color:rgba(255,255,255,0.85);font-family:var(--font-body);font-size:0.9rem}
+.footer-main{padding:clamp(1.5rem,3vw,2.5rem) clamp(1rem,3vw,2rem)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media(min-width:768px){.footer-inner{grid-template-columns:1fr 1fr 1.2fr;gap:3rem}}
+.footer-col h4{font-family:var(--font-heading);font-weight:400;text-transform:uppercase;font-size:1rem;color:var(--orange);margin-bottom:12px;letter-spacing:0.04em}
+.footer-col p{margin-bottom:6px;line-height:1.5}
+.footer-wa-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-weight:600;font-size:0.85rem;padding:10px 20px;border-radius:8px;margin-top:16px;transition:background 0.2s}
+.footer-wa-btn:hover{background:#e07a10}
+.footer-map{margin:12px 0}
+.footer-map-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.9);color:#063d6e;font-weight:600;font-size:0.85rem;padding:10px 20px;border-radius:8px;transition:background 0.2s}
+.footer-map-btn:hover{background:#fff}
+.footer-info{background:rgba(0,0,0,0.15);padding:12px clamp(1rem,3vw,2rem);text-align:center;font-size:0.75rem;line-height:1.5;color:rgba(255,255,255,0.6)}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px clamp(1rem,3vw,2rem);border-top:1px solid rgba(255,255,255,0.1);font-size:0.8rem;color:rgba(255,255,255,0.5);max-width:1200px;margin:0 auto}
+.footer-legal a{color:rgba(255,255,255,0.5);transition:color 0.2s}
+.footer-legal a:hover{color:#fff}
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+<!-- End GA4 -->
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+(i);y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","XXXXXXX");</script>
+<!-- End Clarity -->
+
+<!-- Google Search Console verification -->
+<meta name="google-site-verification" content="XXXXXXX">
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="Chiller Peças - Página Inicial">
+      <img src="Manual de Marca/logo branca Header (barra fixa topo).svg" alt="Chiller Peças" style="height:36px;width:auto;">
+    </a>
+    <nav class="header-nav" aria-label="Navegação principal">
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#aplicacoes">Aplicações</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta-wrap">
+      <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp" data-cta="header-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Orçamento
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+  <a href="#diferenciais">Diferenciais</a>
+  <a href="#modelos">Modelos</a>
+  <a href="#aplicacoes">Aplicações</a>
+  <a href="#faq">FAQ</a>
+  <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" target="_blank" rel="noopener" style="color:var(--green-wa)" data-cta="other-whatsapp">WhatsApp</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Climatizadores Chiller Peças">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Motor WEG
+        </span>
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          INMETRO
+        </span>
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 0V3h6v4m0 0v1a3 3 0 006 0V7"/></svg>
+          Fabricação Nacional
+        </span>
+      </div>
+      <h1>Refresque seu ambiente gastando menos que um ventilador.</h1>
+      <p class="hero-subtitle">Climatizadores evaporativos portáteis que cortam até 90% da conta de energia. Tecnologia real, resultado que você sente na pele e no bolso.</p>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa" target="_blank" rel="noopener" data-cta="hero-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orçamento
+        </a>
+      </div>
+    </div>
+    <div class="hero-img-wrap slide-right">
+      <img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador evaporativo Chiller Peças 45L em ambiente comercial" loading="eager" width="800" height="600">
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar" role="complementary" aria-label="Selos de confiança">
+  <div class="trust-bar-inner container">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Motor WEG
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Certificação INMETRO
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 0V3h6v4m0 0v1a3 3 0 006 0V7"/></svg>
+      100% Nacional
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Garantia de Fábrica
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      Assistência Nacional
+    </div>
+  </div>
+</div>
+
+<!-- ===== DIFERENCIAIS (2000 empresas hero from LP4) ===== -->
+<section class="diferenciais-hero" id="diferenciais" aria-label="Diferenciais">
+<div class="container">
+<div class="diff-hero-top reveal" style="display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center;margin-bottom:clamp(2rem,4vw,3rem);">
+<div style="display:flex;flex-direction:column;gap:1rem;">
+<h2 class="hero-headline" style="margin:0;">Mais de <span data-count="2000" style="color:#ff901c">0</span> empresas já trocaram o ar-condicionado.</h2>
+<p class="hero-sub" style="margin:0;">Climatizadores Chiller Peças: economia real, comprovada por quem usa todos os dias.</p>
+<a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-primary" data-cta="diferenciais-whatsapp" target="_blank" rel="noopener" style="align-self:flex-start;">
+<svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+Solicitar Orçamento via WhatsApp
+</a>
+</div>
+<img src="climatizadores-fotos/ambientado.png" alt="Climatizadores Chiller Peças em ambientes comerciais" loading="lazy" style="width:100%;max-height:280px;object-fit:cover;border-radius:12px;">
+</div>
+
+<div class="install-strip" role="list" aria-label="Instalações realizadas">
+<div class="install-strip-track">
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador 45L em padaria" loading="lazy" width="260" height="170">
+<figcaption>Padaria São Jorge, Campinas, SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/70L-02.jpg" alt="Climatizador 70L em igreja" loading="lazy" width="260" height="170">
+<figcaption>Igreja Batista Central, Goiânia, GO</figcaption>
+</figure>
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/70L-05.jpg" alt="Climatizador em galpão industrial" loading="lazy" width="260" height="170">
+<figcaption>Metalúrgica Progresso, Sorocaba, SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/ambientado.png" alt="Climatizador em ambiente comercial" loading="lazy" width="260" height="170">
+<figcaption>Auto Peças Central, Ribeirão Preto, SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/45L-03.jpg" alt="Climatizador 45L em restaurante" loading="lazy" width="260" height="170">
+<figcaption>Restaurante Sabor da Terra, Uberlândia, MG</figcaption>
+</figure>
+<!-- duplicados para loop infinito -->
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/45L-02.jpg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Padaria São Jorge, Campinas, SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/70L-02.jpg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Igreja Batista Central, Goiânia, GO</figcaption>
+</figure>
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/70L-05.jpg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Metalúrgica Progresso, Sorocaba, SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/ambientado.png" alt="" loading="lazy" width="260" height="170">
+<figcaption>Auto Peças Central, Ribeirão Preto, SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/45L-03.jpg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Restaurante Sabor da Terra, Uberlândia, MG</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== ECONOMIA (from LP4) ===== -->
+<section class="diff-section" id="economia">
+<div class="container">
+<div class="diff-grid">
+<div class="diff-content">
+<p class="diff-label">Economia Comprovada</p>
+<div class="num-highlight">
+<span class="count-up" data-target="90" data-suffix="%">0%</span>
+<span class="unit">de economia na energia</span>
+</div>
+<h2 class="diff-title">Funciona com a fração do custo de um ar-condicionado.</h2>
+<p class="diff-text">Um climatizador evaporativo Chiller Peças consome em média 200W. Um ar-condicionado de capacidade equivalente consome cerca de 2.000W. Isso representa uma redução de até 90% na conta de energia elétrica.</p>
+<ul class="diff-list">
+<li>Motor WEG de alta eficiência e durabilidade</li>
+<li>Consumo médio de apenas 200W por hora</li>
+<li>Sem necessidade de gás refrigerante</li>
+<li>Manutenção simples e de baixo custo</li>
+</ul>
+</div>
+<div class="diff-visual">
+<img src="climatizadores-fotos/45L-04.jpg" alt="Climatizador Chiller Peças 45L - detalhe do motor WEG de alta eficiência" loading="lazy" width="600" height="450">
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== MODELOS (cards from LP4) ===== -->
+<section class="diff-section models-section" id="modelos">
+<div class="container">
+<p class="diff-label" style="text-align:center;margin-bottom:8px;font-size:16px;letter-spacing:0.08em">Modelos Disponíveis</p>
+<h2 class="diff-title" style="text-align:center;max-width:22ch;margin:0 auto clamp(28px,4vw,48px);font-size:clamp(28px,4.5vw,44px)">Qual o tamanho do seu ambiente?</h2>
+
+<div class="models-grid">
+<article class="model-card reveal">
+<img src="climatizadores-fotos/45L-04.jpg" alt="Climatizador Evaporativo Portátil Chiller Peças 45 Litros" loading="lazy" width="200" height="200">
+<h3 class="model-name">Climatizador 45L</h3>
+<p class="model-cap">Ambientes de até 40m²</p>
+<ul class="model-specs">
+<li><span>Reservatório</span><strong>45 litros</strong></li>
+<li><span>Vazão de ar</span><strong>3.500 m³/h</strong></li>
+<li><span>Potência</span><strong>160W</strong></li>
+<li><span>Motor</span><strong>WEG</strong></li>
+</ul>
+<a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%2045L" class="cta-model" data-cta="modelo-45l-whatsapp" target="_blank" rel="noopener">Cotar modelo</a>
+</article>
+<article class="model-card reveal">
+<span class="model-badge">Mais procurado</span>
+<img src="climatizadores-fotos/70L-03.jpg" alt="Climatizador Evaporativo Portátil Chiller Peças 70 Litros" loading="lazy" width="200" height="200">
+<h3 class="model-name">Climatizador 70L</h3>
+<p class="model-cap">Ambientes de até 70m²</p>
+<ul class="model-specs">
+<li><span>Reservatório</span><strong>70 litros</strong></li>
+<li><span>Vazão de ar</span><strong>7.000 m³/h</strong></li>
+<li><span>Potência</span><strong>200W</strong></li>
+<li><span>Motor</span><strong>WEG</strong></li>
+</ul>
+<a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%2070L" class="cta-model" data-cta="modelo-70l-whatsapp" target="_blank" rel="noopener">Cotar modelo</a>
+</article>
+<article class="model-card reveal">
+<img src="climatizadores-fotos/100L-04.jpg" alt="Climatizador Evaporativo Portátil Chiller Peças Duplo" loading="lazy" width="200" height="200">
+<h3 class="model-name">Climatizador Duplo</h3>
+<p class="model-cap">Galpões acima de 150m²</p>
+<ul class="model-specs">
+<li><span>Reservatório</span><strong>150 litros</strong></li>
+<li><span>Vazão de ar</span><strong>20.000 m³/h</strong></li>
+<li><span>Potência</span><strong>450W</strong></li>
+<li><span>Motor</span><strong>2x WEG</strong></li>
+</ul>
+<a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%20Duplo" class="cta-model" data-cta="modelo-duplo-whatsapp" target="_blank" rel="noopener">Cotar modelo</a>
+</article>
+</div>
+</div>
+</section>
+
+<!-- ===== COMPARAÇÃO (table from LP3) ===== -->
+<section class="comparison" id="comparar" aria-label="Tabela comparativa de modelos">
+  <div class="comparison-inner">
+    <h2>Compare os modelos</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Especificação</th>
+            <th>45L</th>
+            <th>70L <span class="badge-popular">Mais procurado</span></th>
+            <th>Duplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reservatório</td>
+            <td>45 litros</td>
+            <td>70 litros</td>
+            <td>150 litros</td>
+          </tr>
+          <tr>
+            <td>Vazão de ar</td>
+            <td>3.500 m³/h</td>
+            <td>5.500 m³/h</td>
+            <td>15.000 m³/h</td>
+          </tr>
+          <tr>
+            <td>Área recomendada</td>
+            <td>Até 35 m²</td>
+            <td>40 a 60 m²</td>
+            <td>80 a 150 m²</td>
+          </tr>
+          <tr>
+            <td>Consumo</td>
+            <td>200W</td>
+            <td>230W</td>
+            <td>560W</td>
+          </tr>
+          <tr>
+            <td>Ventiladores</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Velocidades</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Voltagem</td>
+            <td>110V / 220V</td>
+            <td>220V</td>
+            <td>220V</td>
+          </tr>
+          <tr>
+            <td>Rodízios</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td>Sim</td>
+          </tr>
+          <tr>
+            <td>Ideal para</td>
+            <td>Residências, lojas pequenas</td>
+            <td>Restaurantes, escritórios, igrejas</td>
+            <td>Indústrias, gráficas, galpões</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APLICAÇÕES (from LP5) ===== -->
+<section class="aplicacoes-section" id="aplicacoes">
+  <div class="container">
+    <div class="section-label reveal">Aplicações</div>
+    <h2 class="reveal">Onde a Chiller Peças atua</h2>
+    <p class="aplicacoes-intro reveal">Ambientes abertos, semiabertos ou fechados com ventilação. O climatizador evaporativo é a solução para calor em espaços que o ar-condicionado não alcança.</p>
+
+    <div class="aplicacoes-grid">
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador evaporativo Chiller Peças em galpão industrial" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Industrial</span>
+          <span class="aplicacao-name">Galpões e fábricas</span>
+          <span class="aplicacao-spec">Modelo recomendado: PC Duplo</span>
+        </div>
+      </div>
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/70L-02.jpg" alt="Climatizador evaporativo Chiller Peças 70L em restaurante" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Comercial</span>
+          <span class="aplicacao-name">Restaurantes e bares</span>
+          <span class="aplicacao-spec">Modelo recomendado: PC 70L</span>
+        </div>
+      </div>
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/70L-03.jpg" alt="Climatizador evaporativo Chiller Peças 70L em academia" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Esportivo</span>
+          <span class="aplicacao-name">Academias e quadras</span>
+          <span class="aplicacao-spec">Modelo recomendado: PC 100L</span>
+        </div>
+      </div>
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/45L-04.jpg" alt="Climatizador evaporativo Chiller Peças 45L em escritório" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Corporativo</span>
+          <span class="aplicacao-name">Escritórios e coworkings</span>
+          <span class="aplicacao-spec">Modelo recomendado: PC 45L</span>
+        </div>
+      </div>
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/70L-05.jpg" alt="Climatizador evaporativo Chiller Peças 70L em evento" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Eventos</span>
+          <span class="aplicacao-name">Feiras e exposições</span>
+          <span class="aplicacao-spec">Modelo recomendado: PC Duplo</span>
+        </div>
+      </div>
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/100L-04.jpg" alt="Climatizador evaporativo Chiller Peças em armazém" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Logística</span>
+          <span class="aplicacao-name">Armazéns e depósitos</span>
+          <span class="aplicacao-spec">Modelo recomendado: PC 100L</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROVA SOCIAL (from LP5) ===== -->
+<section class="social-section" id="depoimentos">
+  <div class="container">
+    <div class="section-label section-label-light reveal">Depoimentos</div>
+    <h2 class="reveal">Quem usa, recomenda.</h2>
+
+    <div class="social-grid">
+      <div class="social-card reveal">
+        <div class="social-stars" aria-label="5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="social-quote">"Instalamos 4 unidades no galpão e a diferença foi imediata. O pessoal da produção sentiu no primeiro dia. Consumo baixíssimo comparado ao ar-condicionado central."</p>
+        <div class="social-author">Roberto Mendes</div>
+        <div class="social-role">Gerente de operações, metalúrgica em Campinas/SP</div>
+      </div>
+      <div class="social-card reveal">
+        <div class="social-stars" aria-label="5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="social-quote">"Usamos na área externa do restaurante. Os clientes elogiam e o custo de energia é irrisório. O rodízio facilita muito para reposicionar conforme a demanda."</p>
+        <div class="social-author">Ana Paula Vieira</div>
+        <div class="social-role">Proprietária de restaurante em Ribeirão Preto/SP</div>
+      </div>
+      <div class="social-card reveal">
+        <div class="social-stars" aria-label="5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="social-quote">"O motor WEG dá uma confiança enorme. Já tivemos outras marcas com problemas em menos de 6 meses. O climatizador Chiller Peças está firme há 2 anos, funcionando todos os dias."</p>
+        <div class="social-author">Carlos Eduardo</div>
+        <div class="social-role">Coordenador de manutenção, distribuidora em Goiânia/GO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL (from LP5) ===== -->
+<section class="cta-section" id="contato">
+  <div class="container">
+    <div class="section-label section-label-light reveal">Contato</div>
+    <h2 class="reveal">Ainda em dúvida entre 45L, 70L ou Duplo?</h2>
+    <p class="cta-subtitle reveal">Fale com a Chiller Peças e receba uma indicação do modelo ideal para o seu ambiente. Atendimento rápido pelo WhatsApp.</p>
+    <div class="cta-layout">
+      <div class="cta-whatsapp-block reveal">
+        <p>Fale com a Chiller Peças e receba uma indicação do modelo ideal para o seu ambiente. Atendimento rápido pelo WhatsApp.</p>
+        <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="btn-primary" target="_blank" rel="noopener noreferrer" style="width:fit-content" data-cta="cta-final-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar no WhatsApp agora
+        </a>
+        <p class="cta-helper">Envie o tamanho aproximado do ambiente e o tipo de uso. Nós orientamos você.</p>
+      </div>
+      <form class="cta-form reveal" id="contact-form">
+        <label for="form-nome">Nome</label>
+        <input type="text" id="form-nome" name="nome" placeholder="Seu nome completo" required>
+        <label for="form-telefone">Telefone / WhatsApp</label>
+        <input type="tel" id="form-telefone" name="telefone" placeholder="(00) 00000-0000" required>
+        <label for="form-tipo">Tipo de ambiente</label>
+        <select id="form-tipo" name="tipo_ambiente" required>
+          <option value="">Selecione o tipo</option>
+          <option value="residencial">Residencial</option>
+          <option value="comercial">Comercial</option>
+          <option value="industrial">Industrial</option>
+          <option value="igreja">Igreja/Templo</option>
+          <option value="restaurante">Restaurante/Padaria</option>
+          <option value="escritorio">Escritório</option>
+          <option value="galpao">Galpão/Oficina</option>
+          <option value="outro">Outro</option>
+        </select>
+        <label for="form-tamanho">Tamanho aproximado</label>
+        <select id="form-tamanho" name="tamanho" required>
+          <option value="">Selecione o tamanho</option>
+          <option value="ate-20">Até 20 m²</option>
+          <option value="20-40">20 a 40 m²</option>
+          <option value="40-80">40 a 80 m²</option>
+          <option value="acima-80">Acima de 80 m²</option>
+        </select>
+        <button type="submit" class="btn-primary">Enviar solicitação</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ (from LP4) ===== -->
+<section class="faq-section" id="faq">
+<div class="container">
+<p class="diff-label" style="text-align:center;margin-bottom:8px">Perguntas Frequentes</p>
+<h2 class="diff-title" style="text-align:center;max-width:22ch;margin:0 auto clamp(28px,4vw,48px)">Tire suas dúvidas.</h2>
+
+<div class="faq-list">
+<details class="faq-item">
+<summary>Climatizador evaporativo funciona em ambiente fechado?</summary>
+<div class="faq-answer">O climatizador evaporativo funciona melhor em ambientes abertos ou semiabertos, onde há circulação de ar. Em ambientes totalmente fechados, é necessário garantir pelo menos uma saída de ar para manter a eficiência da evaporação e evitar o aumento da umidade.</div>
+</details>
+<details class="faq-item">
+<summary>Qual a diferença entre climatizador e ar-condicionado?</summary>
+<div class="faq-answer">O ar-condicionado usa gás refrigerante e compressor para resfriar o ar, consumindo muito mais energia. O climatizador evaporativo usa água e ventilação para reduzir a temperatura, consumindo até 90% menos energia. O climatizador também renova o ar constantemente, enquanto o ar-condicionado recircula o mesmo ar.</div>
+</details>
+<details class="faq-item">
+<summary>De quanto em quanto tempo preciso trocar a cellulose?</summary>
+<div class="faq-answer">A cellulose (painel evaporativo) deve ser trocada a cada 12 a 18 meses, dependendo da qualidade da água e da frequência de uso. A troca é simples e pode ser feita pelo próprio usuário, sem necessidade de ferramentas especiais.</div>
+</details>
+<details class="faq-item">
+<summary>O climatizador consome muita água?</summary>
+<div class="faq-answer">Não. O consumo médio é de 3 a 8 litros por hora, dependendo do modelo e das condições ambientais. Isso é significativamente menos do que o custo energético de um ar-condicionado equivalente.</div>
+</details>
+<details class="faq-item">
+<summary>Posso usar o climatizador em galpões e áreas industriais?</summary>
+<div class="faq-answer">Sim, os climatizadores Chiller Peças são ideais para galpões, fábricas, oficinas e áreas industriais. O modelo Duplo, com vazão de 20.000 m³/h, é projetado especificamente para grandes áreas. Muitos de nossos clientes usam em ambientes de produção com portões abertos.</div>
+</details>
+<details class="faq-item">
+<summary>Vocês fazem entrega para todo o Brasil?</summary>
+<div class="faq-answer">Sim, a Chiller Peças realiza entregas para todo o território nacional. Entre em contato pelo WhatsApp para consultar prazos e condições de frete para sua região.</div>
+</details>
+<details class="faq-item">
+<summary>Qual a garantia dos climatizadores Chiller Peças?</summary>
+<div class="faq-answer">Todos os modelos possuem garantia de fábrica. O motor WEG possui garantia adicional do fabricante. Consulte as condições específicas de cada modelo no momento da compra.</div>
+</details>
+</div>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <img src="Manual de Marca/logo footer.svg" alt="Chiller Peças" style="height:44px;width:auto;margin-bottom:16px;">
+        <p>Especialistas em refrigeração comercial e industrial</p>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contato</h4>
+        <p>Tel · (11) 2918-8119</p>
+        <p>WhatsApp · (11) 94051-8767</p>
+        <p>vendas@chillerpecas.com</p>
+        <p>sac@chillerpecas.com</p>
+        <p style="margin-top:12px;font-size:0.85rem;opacity:0.7;">Seg a Qui 7h-18h · Sex 7h-17h · Sáb 8h-13h</p>
+        <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20climatizadores%20Chiller%20Pe%C3%A7as" class="footer-wa-btn" target="_blank" rel="noopener" data-cta="footer-whatsapp">Cotar no WhatsApp</a>
+      </div>
+      <div class="footer-col footer-address">
+        <h4>Endereço · Como chegar</h4>
+        <p>Rua Antônio de Barros, 1093</p>
+        <p>Tatuapé</p>
+        <p>São Paulo/SP</p>
+        <p>CEP 03401-000</p>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.3!2d-46.5716!3d-23.5399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzIzLjYiUyA0NsKwMzQnMTcuOCJX!5e0!3m2!1sen!2sbr!4v1" width="100%" height="140" style="border:0;border-radius:6px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a href="https://maps.google.com/maps?q=Rua+Antônio+de+Barros+1093+Tatuapé+São+Paulo" class="footer-map-btn" target="_blank" rel="noopener">📍 Chegar na Chiller Peças</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info">
+    <p><strong>CHILLER PECAS LTDA</strong> · CNPJ 35.028.609/0001-53 · Rua Antônio de Barros, 1093 · Tatuapé · São Paulo/SP · CEP 03401-000</p>
+    <p>Atendimento: (11) 2918-8119 · vendas@chillerpecas.com · Seg a Qui 7h-18h · Sex 7h-17h · Sáb 8h-13h</p>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 CHILLER PECAS LTDA · Desde 2019 mantendo a indústria refrigerada.</p>
+    <div class="footer-legal"><a href="#">Privacidade</a> · <a href="#">Termos de uso</a> · <a href="#">Acessibilidade</a></div>
+  </div>
+</footer>
+
+<!-- ===== STICKY MOBILE CTA ===== -->
+<div class="sticky-cta" aria-label="Contato rápido">
+  <a href="https://wa.me/55XXXXXXXXXXX?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa" target="_blank" rel="noopener" data-cta="sticky-mobile-whatsapp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Solicitar Orçamento via WhatsApp
+  </a>
+</div>
+
+<script>
+// ===== HABLLA + UTM TRACKING SYSTEM =====
+(function(){
+  var WEBHOOK_URL = 'https://webhook.hablla.com/v1/6a4276ce041715be2da7e341';
+
+  // Parse URL params (UTMs + gclid)
+  function getUrlParams(){
+    var params = {};
+    var search = window.location.search.substring(1);
+    if(!search) return params;
+    search.split('&').forEach(function(pair){
+      var kv = pair.split('=');
+      params[decodeURIComponent(kv[0])] = decodeURIComponent(kv[1] || '');
+    });
+    return params;
+  }
+
+  // Store params in sessionStorage on first load
+  var urlParams = getUrlParams();
+  var trackingKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid'];
+  trackingKeys.forEach(function(key){
+    if(urlParams[key]) sessionStorage.setItem(key, urlParams[key]);
+  });
+
+  // Get stored tracking data
+  function getTrackingData(){
+    var data = {};
+    trackingKeys.forEach(function(key){
+      var val = sessionStorage.getItem(key);
+      if(val) data[key] = val;
+    });
+    return data;
+  }
+
+  // Detect which "dobra" (fold/section) the user is in
+  function getCurrentDobra(){
+    var sections = document.querySelectorAll('section[id], [id].hero, [id].trust-bar, [id].diferenciais, [id].educativa, [id].modelos, [id].aplicacoes, [id].prova-social, [id].faq-section, [id].cta-final');
+    var current = 'header';
+    var scrollY = window.scrollY + window.innerHeight / 2;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= scrollY){
+        current = sec.id || sec.className.split(' ')[0];
+      }
+    });
+    return current;
+  }
+
+  // Send data to Hablla webhook
+  function sendToHablla(buttonId, buttonText, additionalData){
+    var tracking = getTrackingData();
+    var payload = {
+      event: 'whatsapp_click',
+      timestamp: new Date().toISOString(),
+      page_url: window.location.href,
+      page_title: document.title,
+      referrer: document.referrer,
+      dobra: getCurrentDobra(),
+      button_id: buttonId || 'unknown',
+      button_text: buttonText || 'unknown',
+      utm_source: tracking.utm_source || '',
+      utm_medium: tracking.utm_medium || '',
+      utm_campaign: tracking.utm_campaign || '',
+      utm_term: tracking.utm_term || '',
+      utm_content: tracking.utm_content || '',
+      gclid: tracking.gclid || '',
+      fbclid: tracking.fbclid || '',
+      user_agent: navigator.userAgent,
+      screen_resolution: window.screen.width + 'x' + window.screen.height,
+      viewport: window.innerWidth + 'x' + window.innerHeight
+    };
+    if(additionalData) Object.assign(payload, additionalData);
+
+    // Send to Hablla
+    fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function(){});
+
+    // Push to dataLayer for GTM/GA4
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'whatsapp_click',
+      whatsapp_button_id: buttonId,
+      whatsapp_button_text: buttonText,
+      whatsapp_dobra: payload.dobra,
+      whatsapp_utm_source: payload.utm_source,
+      whatsapp_utm_campaign: payload.utm_campaign
+    });
+  }
+
+  // Intercept ALL WhatsApp link clicks
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
+    if(!link) return;
+
+    e.preventDefault();
+
+    var buttonId = link.id || link.getAttribute('data-cta') || link.closest('section, header, div[id]')?.id || 'unknown';
+    var buttonText = link.textContent.trim().substring(0, 50);
+
+    sendToHablla(buttonId, buttonText);
+
+    // Delay redirect slightly to ensure webhook fires
+    setTimeout(function(){
+      window.open(link.href, '_blank');
+    }, 300);
+  });
+
+  // Intercept form submission (handled below in the main IIFE)
+  var contactForm = document.getElementById('contact-form');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      var formData = {};
+      var inputs = contactForm.querySelectorAll('input, select, textarea');
+      inputs.forEach(function(input){
+        if(input.name) formData[input.name] = input.value;
+      });
+
+      sendToHablla('form_submit', 'Formulário de contato', {
+        event: 'form_submit',
+        form_data: formData
+      });
+
+      // Build WhatsApp message with form data
+      var msg = 'Olá! Gostaria de solicitar um orçamento para climatizadores Chiller Peças.';
+      if(formData.nome) msg += '\nNome: ' + formData.nome;
+      if(formData.telefone) msg += '\nTelefone: ' + formData.telefone;
+      if(formData.tipo_ambiente) msg += '\nTipo de ambiente: ' + formData.tipo_ambiente;
+      if(formData.tamanho) msg += '\nTamanho: ' + formData.tamanho;
+
+      var waUrl = 'https://wa.me/55XXXXXXXXXXX?text=' + encodeURIComponent(msg);
+
+      setTimeout(function(){
+        window.open(waUrl, '_blank');
+      }, 300);
+    });
+  }
+
+  // Track page view with UTMs
+  window.dataLayer = window.dataLayer || [];
+  var tracking = getTrackingData();
+  window.dataLayer.push({
+    event: 'page_view_with_params',
+    utm_source: tracking.utm_source || '',
+    utm_medium: tracking.utm_medium || '',
+    utm_campaign: tracking.utm_campaign || '',
+    gclid: tracking.gclid || ''
+  });
+
+  // Expose sendToHablla globally for form handlers
+  window.sendToHablla = sendToHablla;
+})();
+// ===== END TRACKING SYSTEM =====
+
+(function(){
+  'use strict';
+
+  // ── Header scroll effect ──
+  const header = document.querySelector('.site-header');
+  let lastScroll = 0;
+  function onScroll() {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 40);
+    lastScroll = y;
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
+
+  // ── Mobile menu ──
+  const menuBtn = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', function() {
+    const open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ── Sticky CTA on mobile ──
+  const stickyCta = document.querySelector('.sticky-cta');
+  const hero = document.querySelector('.hero');
+  function checkSticky() {
+    if (window.innerWidth < 768) {
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      stickyCta.classList.toggle('visible', heroBottom < 0);
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', checkSticky, {passive: true});
+  window.addEventListener('resize', checkSticky);
+
+  // ── Intersection Observer for reveals ──
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    const revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+
+    document.querySelectorAll('.reveal, .slide-right').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .slide-right').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  // ── Count-up animation ──
+  var countEls = document.querySelectorAll('[data-count]');
+  if (prefersReduced) {
+    countEls.forEach(function(el) {
+      el.textContent = parseInt(el.getAttribute('data-count'), 10).toLocaleString('pt-BR');
+    });
+  } else {
+    var countObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var duration = 1200;
+        var start = performance.now();
+        function tick(now) {
+          var progress = Math.min((now - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased).toLocaleString('pt-BR');
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        countObserver.unobserve(el);
+      });
+    }, {threshold: 0.5});
+    countEls.forEach(function(el) { countObserver.observe(el); });
+  }
+
+  // ── Count-up for .count-up[data-target] (90% economia block) ──
+  var countUpEls = document.querySelectorAll('.count-up[data-target]');
+  if (prefersReduced) {
+    countUpEls.forEach(function(el) {
+      el.textContent = el.getAttribute('data-target') + (el.getAttribute('data-suffix') || '');
+    });
+  } else {
+    countUpEls.forEach(function(el) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (!e.isIntersecting) return;
+          var t = parseInt(el.getAttribute('data-target'), 10);
+          var s = el.getAttribute('data-suffix') || '';
+          var dur = 1200, st = performance.now();
+          function tick(now) { var p = Math.min((now-st)/dur,1); var ea = 1-Math.pow(1-p,3); el.textContent = Math.round(t*ea)+s; if(p<1) requestAnimationFrame(tick); }
+          requestAnimationFrame(tick);
+          obs.unobserve(el);
+        });
+      }, {threshold: 0.5});
+      obs.observe(el);
+    });
+  }
+
+  // ── FAQ accordion (native <details>, close others on open) ──
+  document.querySelectorAll('.faq-section .faq-item').forEach(function(detail) {
+    detail.addEventListener('toggle', function() {
+      if (detail.open) {
+        document.querySelectorAll('.faq-section .faq-item[open]').forEach(function(other) {
+          if (other !== detail) other.removeAttribute('open');
+        });
+      }
+    });
+  });
+
+  // ── Form phone mask ──
+  var telInput = document.getElementById('form-telefone');
+  if (telInput) {
+    telInput.addEventListener('input', function(e) {
+      var v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 6) {
+        e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      } else if (v.length > 2) {
+        e.target.value = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      } else if (v.length > 0) {
+        e.target.value = '(' + v;
+      }
+    });
+  }
+
+  // Note: Form submit handler is now managed by the tracking system above
+})();
+</script>
+</body>
+</html>
