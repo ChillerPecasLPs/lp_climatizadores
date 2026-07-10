@@ -135,7 +135,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero{
   min-height:calc(100vh - var(--header-h) - 52px);
   min-height:calc(100dvh - var(--header-h) - 52px);
-  background:var(--blue);
+  background:linear-gradient(90deg,rgba(4,30,58,0.94) 0%,rgba(4,30,58,0.80) 34%,rgba(4,30,58,0.42) 60%,rgba(4,30,58,0.10) 100%),url("climatizadores-fotos/hero-novo.png") center center/cover no-repeat var(--blue);
   display:flex;align-items:center;
   position:relative;
   overflow:hidden;
@@ -153,11 +153,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   justify-content:center;
   gap:1.5rem;
 }
-.hero h1{color:var(--white);max-width:14ch}
+.hero h1{color:var(--white);max-width:14ch;text-shadow:0 2px 16px rgba(0,0,0,0.35)}
 .hero-subtitle{
-  color:rgba(255,255,255,0.7);
+  color:rgba(255,255,255,0.82);
   font-size:clamp(1rem,0.9rem + 0.5vw,1.25rem);
   font-weight:400;max-width:38ch;
+  text-shadow:0 1px 10px rgba(0,0,0,0.3);
 }
 .hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem}
 .hero-badge{
@@ -172,30 +173,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero-badge svg{width:14px;height:14px;opacity:0.85}
 .hero-cta-group{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center}
 .hero-cta-group .cta-wa{font-size:clamp(1rem,0.95rem + 0.25vw,1.15rem);padding:1rem 2rem}
-.hero-img-wrap{
-  position:relative;
-  margin-top:2rem;
-  display:flex;justify-content:flex-end;
-}
-.hero-img-wrap img{
-  width:100%;max-width:520px;
-  border-radius:8px 8px 0 0;
-  object-fit:cover;
-  aspect-ratio:4/3;
-}
+.hero-img-wrap{display:none}
 
 @media(min-width:1024px){
-  .hero-inner{grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
-  .hero-img-wrap{
-    position:absolute;right:-2rem;bottom:0;
-    width:55%;max-width:680px;
-    margin-top:0;
-  }
-  .hero-img-wrap img{
-    max-width:100%;aspect-ratio:auto;
-    border-radius:8px 0 0 0;
-    height:85vh;object-position:center;
-  }
+  .hero-content{max-width:640px}
 }
 
 /* ── TRUST BAR ──────────────────────────────────── */
@@ -638,13 +619,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 
 @media(prefers-reduced-motion:reduce){
-  .reveal,.slide-right{opacity:1;transform:none;transition:none}
+  .slide-right{opacity:1;transform:none;transition:none}
   .model-img img{transition:none}
   .app-card img{transition:none}
   .faq-chevron{transition:none}
   .faq-answer{transition:none}
   .cta-wa{transition:none}
-  [data-count]{transition:none}
 }
 
 /* ── DIFERENCIAIS HERO (from LP4) ── */
@@ -785,6 +765,99 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px clamp(1rem,3vw,2rem);border-top:1px solid rgba(255,255,255,0.1);font-size:0.8rem;color:rgba(255,255,255,0.5);max-width:1200px;margin:0 auto}
 .footer-legal a{color:rgba(255,255,255,0.5);transition:color 0.2s}
 .footer-legal a:hover{color:#fff}
+
+/* ===== BLOCOS EXTRA (STATS · SIM · ECON · DUELO · VÍDEO) — adaptados à V6 ===== */
+.sec-pad{padding:clamp(3rem,6vw,5.5rem) 0}
+.center{text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-heading);font-weight:400;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.center .eyebrow::after{content:"";width:28px;height:2px;background:currentColor}
+.lead{font-size:1.1rem;color:var(--text-muted);max-width:680px}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* STATS */
+.stats{background:linear-gradient(135deg,var(--blue-deep),var(--blue));color:#fff}
+.stats .container{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;padding:clamp(2.5rem,5vw,4rem) clamp(1rem,3vw,2.5rem)}
+.stat .num{font-family:var(--font-heading);font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:400;line-height:1;color:var(--orange)}
+.stat p{color:rgba(255,255,255,0.75);font-size:.95rem;margin-top:8px}
+@media(max-width:720px){.stats .container{grid-template-columns:repeat(2,1fr);gap:34px 20px}}
+
+/* SIMULAÇÃO */
+.sim{position:relative;height:520px;max-width:1000px;margin:44px auto 0;background:radial-gradient(130% 100% at 50% 40%,#fff 40%,#eef5f9 75%,#dfeaf1);border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(8,91,167,.20)}
+.sim .heat{position:absolute;top:0;bottom:0;left:0;width:42%;background:linear-gradient(90deg,rgba(255,144,28,.18),transparent)}
+.sim .cold{position:absolute;top:0;bottom:0;right:0;width:42%;background:linear-gradient(270deg,rgba(16,139,209,.20),transparent)}
+.sim .prod{position:absolute;bottom:7%;left:50%;transform:translateX(-50%);height:80%;z-index:6;mix-blend-mode:multiply}
+.sim .zone{position:absolute;top:22px;padding:9px 16px;border-radius:22px;font-family:var(--font-heading);font-weight:400;color:#fff;font-size:.85rem;letter-spacing:.03em;z-index:9;display:flex;align-items:center;gap:8px}
+.sim .zone svg{width:18px;height:18px}
+.sim .zhot{left:24px;background:linear-gradient(135deg,#ff901c,#e0670a)}
+.sim .zcool{right:24px;background:linear-gradient(135deg,var(--blue-light),var(--blue))}
+.sim .temp{position:absolute;bottom:22px;padding:8px 14px;border-radius:12px;font-family:var(--font-heading);font-weight:400;font-size:1.3rem;z-index:9;color:#fff}
+.sim .thot{left:24px;background:rgba(224,103,10,.94)}
+.sim .tcool{right:24px;background:rgba(8,91,167,.94)}
+.sim .s{position:absolute;height:5px;border-radius:5px;z-index:5}
+.sim .s.hot{background:linear-gradient(90deg,transparent,#ff901c);box-shadow:0 0 10px rgba(255,144,28,.5)}
+.sim .s.cool{background:linear-gradient(90deg,var(--blue-light),transparent);box-shadow:0 0 10px rgba(16,139,209,.55)}
+@keyframes hin{0%{opacity:0;transform:translateX(0) scaleX(.5)}20%{opacity:1}100%{opacity:0;transform:translateX(230px) scaleX(1)}}
+@keyframes cout{0%{opacity:0;transform:translateX(0) scaleX(.5)}20%{opacity:1}100%{opacity:0;transform:translateX(300px) scaleX(1)}}
+@media(max-width:640px){.sim{height:420px}.sim .prod{height:70%}.sim .zone{font-size:.7rem;padding:7px 11px}.sim .temp{font-size:1rem}}
+
+/* ECONOMIA GAUGE */
+.econ{background:var(--blue-deep);color:#fff;overflow:hidden}
+.econ .container{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4vw,3.5rem);align-items:center}
+.econ h2{color:#fff}
+.econ .lead{color:rgba(255,255,255,.8)}
+.econ ul{list-style:none;margin-top:26px;display:grid;gap:16px}
+.econ li{display:flex;gap:13px;align-items:flex-start;font-size:1.02rem;color:#eaf1f7}
+.econ li svg{width:22px;height:22px;color:var(--orange);flex-shrink:0;margin-top:2px}
+.gauge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:clamp(1.5rem,3vw,2.4rem)}
+.gauge .row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;text-align:center}
+.gauge .card{background:#fff;color:var(--text);border-radius:14px;padding:26px 14px}
+.gauge .card.warm{background:#fff5ec}
+.gauge .card .big{font-family:var(--font-heading);font-size:2rem;font-weight:400;line-height:1}
+.gauge .cool .big{color:var(--green-wa)}
+.gauge .warm .big{color:var(--orange)}
+.gauge .card small{color:var(--text-muted);font-weight:600;font-size:.8rem}
+.gauge .x{font-family:var(--font-heading);font-weight:400;color:var(--orange)}
+.barwrap{margin-top:26px}
+.barwrap .lab{display:flex;justify-content:space-between;font-size:.82rem;color:rgba(255,255,255,.75);margin-bottom:7px;font-weight:600}
+.bar{height:12px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden;margin-bottom:16px}
+.bar span{display:block;height:100%;border-radius:99px;width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.bar.a span{background:linear-gradient(90deg,var(--green-wa),#7fe0b8)}
+.bar.b span{background:linear-gradient(90deg,var(--orange),#ffb35c)}
+.reveal.visible .bar.a span{width:10%}
+.reveal.visible .bar.b span{width:100%}
+@media(max-width:900px){.econ .container{grid-template-columns:1fr;gap:34px}}
+
+/* DUELO */
+.duel{display:grid;grid-template-columns:1fr auto 1fr;margin-top:44px;align-items:stretch}
+.duel .side{border-radius:18px;overflow:hidden;box-shadow:0 18px 44px rgba(8,91,167,.14)}
+.duel .win{background:linear-gradient(180deg,#149063,#0c6244);color:#fff}
+.duel .lose{background:linear-gradient(180deg,#9a3323,#6d2016);color:#fff}
+.duel .head{padding:16px 22px;font-family:var(--font-heading);font-weight:400;font-size:1.05rem;letter-spacing:.03em;display:flex;align-items:center;gap:9px}
+.duel .kick{padding:18px 22px 2px;font-family:var(--font-heading);font-weight:400;font-size:1.2rem;line-height:1.15}
+.duel .body{padding:8px 22px 20px;text-align:left}
+.duel .li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;font-weight:600;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.duel .li:last-child{border-bottom:0}
+.duel .ic{font-weight:900;width:18px;flex-shrink:0}
+.duel .win .ic{color:#9dffd8}
+.duel .lose .ic{color:#ffb3a6}
+.duel .mid{display:flex;align-items:center;justify-content:center;padding:0 14px}
+.duel .vs{width:56px;height:56px;border-radius:50%;background:var(--blue-deep);border:3px solid var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:400;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.duel-foot{margin-top:18px;background:linear-gradient(135deg,var(--blue),var(--blue-light));color:#fff;border-radius:14px;padding:18px;text-align:center;font-family:var(--font-heading);font-weight:400;font-size:clamp(1.05rem,2.4vw,1.4rem);letter-spacing:.02em}
+@media(max-width:800px){.duel{grid-template-columns:1fr;gap:14px}.duel .mid{padding:6px 0}.duel .vs{margin:0 auto}}
+/* imagem lateral em fade dentro de cada card do duelo */
+.duel .side{position:relative}
+.duel .fade-img{position:absolute;top:0;bottom:0;width:52%;background-size:cover;background-position:center;z-index:0;pointer-events:none}
+.duel .win .fade-img{left:0;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 30%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 30%,transparent 100%)}
+.duel .lose .fade-img{right:0;-webkit-mask-image:linear-gradient(270deg,#000 0%,#000 30%,transparent 100%);mask-image:linear-gradient(270deg,#000 0%,#000 30%,transparent 100%)}
+.duel .head,.duel .kick,.duel .body{position:relative;z-index:1;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+.duel .win .head,.duel .win .kick,.duel .win .body{padding-left:46%}
+.duel .lose .head,.duel .lose .kick,.duel .lose .body{padding-right:46%}
+
+/* VÍDEO */
+.video-sec{background:var(--bg-alt)}
+.video-frame{position:relative;max-width:920px;margin:40px auto 0;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(8,91,167,.20);background:#04121e}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 </style>
 
 <!-- Google Tag Manager -->
@@ -805,6 +878,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </head>
 <body>
 
+<!-- Ícones SVG reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 4 5 9a5 5 0 0 1-10 0c0-1 .5-2 1-3 .5 2 2 2 2 2-1-3 2-8 2-8z"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></symbol>
+</svg>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -817,8 +897,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     </a>
     <nav class="header-nav" aria-label="Navegação principal">
       <a href="#diferenciais">Diferenciais</a>
+      <a href="#economia">Economia</a>
       <a href="#modelos">Modelos</a>
       <a href="#aplicacoes">Aplicações</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="header-cta-wrap">
@@ -835,8 +917,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
   <a href="#diferenciais">Diferenciais</a>
+  <a href="#economia">Economia</a>
   <a href="#modelos">Modelos</a>
   <a href="#aplicacoes">Aplicações</a>
+  <a href="#depoimentos">Depoimentos</a>
   <a href="#faq">FAQ</a>
   <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" target="_blank" rel="noopener" style="color:var(--green-wa)" data-cta="other-whatsapp">WhatsApp</a>
 </nav>
@@ -868,9 +952,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
         </a>
       </div>
     </div>
-    <div class="hero-img-wrap slide-right">
-      <img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador evaporativo Chiller Peças 45L em ambiente comercial" loading="eager" width="800" height="600">
-    </div>
   </div>
 </section>
 
@@ -900,6 +981,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   </div>
 </div>
 
+<!-- ===== STATS (números que crescem) ===== -->
+<section class="stats">
+  <div class="container reveal">
+    <div class="stat"><div class="num" data-stat="90" data-suffix="%">0%</div><p>de economia de energia</p></div>
+    <div class="stat"><div class="num" data-stat="200" data-suffix="W">0W</div><p>de consumo, o de uma lâmpada</p></div>
+    <div class="stat"><div class="num" data-stat="20" data-suffix=" m">0 m</div><p>de alcance do ar fresco</p></div>
+    <div class="stat"><div class="num" data-stat="0" data-text="R$0">R$0</div><p>de obra para instalar</p></div>
+  </div>
+</section>
+
 <!-- ===== DIFERENCIAIS (2000 empresas hero from LP4) ===== -->
 <section class="diferenciais-hero" id="diferenciais" aria-label="Diferenciais">
 <div class="container">
@@ -918,75 +1009,114 @@ Quero um orçamento sem compromisso
 <div class="install-strip" role="list" aria-label="Instalações realizadas">
 <div class="install-strip-track">
 <figure class="install-card" role="listitem">
-<img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador 45L em padaria" loading="lazy" width="260" height="170">
-<figcaption>Padaria São Jorge, Campinas, SP</figcaption>
+<img src="climatizadores-fotos/1.svg" alt="Climatizador em salão de igreja" loading="lazy" width="260" height="170">
+<figcaption>Igreja Batista Central, Goiânia/GO</figcaption>
 </figure>
 <figure class="install-card" role="listitem">
-<img src="climatizadores-fotos/70L-02.jpg" alt="Climatizador 70L em igreja" loading="lazy" width="260" height="170">
-<figcaption>Igreja Batista Central, Goiânia, GO</figcaption>
+<img src="climatizadores-fotos/2.svg" alt="Climatizador em oficina mecânica" loading="lazy" width="260" height="170">
+<figcaption>Auto Center Silva, Sorocaba/SP</figcaption>
 </figure>
 <figure class="install-card" role="listitem">
-<img src="climatizadores-fotos/70L-05.jpg" alt="Climatizador em galpão industrial" loading="lazy" width="260" height="170">
-<figcaption>Metalúrgica Progresso, Sorocaba, SP</figcaption>
+<img src="climatizadores-fotos/3.svg" alt="Climatizador Duplo em feira de exposição" loading="lazy" width="260" height="170">
+<figcaption>Feira Expo Comercial, São Paulo/SP</figcaption>
 </figure>
 <figure class="install-card" role="listitem">
-<img src="climatizadores-fotos/ambientado.png" alt="Climatizador em ambiente comercial" loading="lazy" width="260" height="170">
-<figcaption>Auto Peças Central, Ribeirão Preto, SP</figcaption>
+<img src="climatizadores-fotos/4.svg" alt="Climatizador Duplo em galpão logístico" loading="lazy" width="260" height="170">
+<figcaption>Centro de Distribuição, Ribeirão Preto/SP</figcaption>
 </figure>
 <figure class="install-card" role="listitem">
-<img src="climatizadores-fotos/45L-03.jpg" alt="Climatizador 45L em restaurante" loading="lazy" width="260" height="170">
-<figcaption>Restaurante Sabor da Terra, Uberlândia, MG</figcaption>
+<img src="climatizadores-fotos/5.svg" alt="Climatizador em festa de casamento ao ar livre" loading="lazy" width="260" height="170">
+<figcaption>Casamento em chácara, Campinas/SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/6.svg" alt="Climatizador em showroom comercial" loading="lazy" width="260" height="170">
+<figcaption>Showroom Chiller Peças, São Paulo/SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem">
+<img src="climatizadores-fotos/7.svg" alt="Climatizador em recepção corporativa" loading="lazy" width="260" height="170">
+<figcaption>Recepção corporativa, Tatuapé/SP</figcaption>
 </figure>
 <!-- duplicados para loop infinito -->
 <figure class="install-card" role="listitem" aria-hidden="true">
-<img src="climatizadores-fotos/45L-02.jpg" alt="" loading="lazy" width="260" height="170">
-<figcaption>Padaria São Jorge, Campinas, SP</figcaption>
+<img src="climatizadores-fotos/1.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Igreja Batista Central, Goiânia/GO</figcaption>
 </figure>
 <figure class="install-card" role="listitem" aria-hidden="true">
-<img src="climatizadores-fotos/70L-02.jpg" alt="" loading="lazy" width="260" height="170">
-<figcaption>Igreja Batista Central, Goiânia, GO</figcaption>
+<img src="climatizadores-fotos/2.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Auto Center Silva, Sorocaba/SP</figcaption>
 </figure>
 <figure class="install-card" role="listitem" aria-hidden="true">
-<img src="climatizadores-fotos/70L-05.jpg" alt="" loading="lazy" width="260" height="170">
-<figcaption>Metalúrgica Progresso, Sorocaba, SP</figcaption>
+<img src="climatizadores-fotos/3.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Feira Expo Comercial, São Paulo/SP</figcaption>
 </figure>
 <figure class="install-card" role="listitem" aria-hidden="true">
-<img src="climatizadores-fotos/ambientado.png" alt="" loading="lazy" width="260" height="170">
-<figcaption>Auto Peças Central, Ribeirão Preto, SP</figcaption>
+<img src="climatizadores-fotos/4.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Centro de Distribuição, Ribeirão Preto/SP</figcaption>
 </figure>
 <figure class="install-card" role="listitem" aria-hidden="true">
-<img src="climatizadores-fotos/45L-03.jpg" alt="" loading="lazy" width="260" height="170">
-<figcaption>Restaurante Sabor da Terra, Uberlândia, MG</figcaption>
+<img src="climatizadores-fotos/5.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Casamento em chácara, Campinas/SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/6.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Showroom Chiller Peças, São Paulo/SP</figcaption>
+</figure>
+<figure class="install-card" role="listitem" aria-hidden="true">
+<img src="climatizadores-fotos/7.svg" alt="" loading="lazy" width="260" height="170">
+<figcaption>Recepção corporativa, Tatuapé/SP</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
 
-<!-- ===== ECONOMIA (from LP4) ===== -->
-<section class="diff-section" id="economia">
-<div class="container">
-<div class="diff-grid">
-<div class="diff-content">
-<p class="diff-label">Economia Comprovada</p>
-<div class="num-highlight">
-<span class="count-up" data-target="90" data-suffix="%">0%</span>
-<span class="unit">de economia na energia</span>
-</div>
-<h2 class="diff-title">O mesmo frescor por uma fração da conta de luz.</h2>
-<p class="diff-text">Faça a conta: o climatizador Chiller Peças consome cerca de 200W, o mesmo que uma lâmpada potente. Um ar-condicionado de capacidade equivalente puxa perto de 2.000W. Ligado o dia inteiro, é a diferença entre uma conta que assusta e uma que você nem sente. Por isso a economia chega a 90%.</p>
-<ul class="diff-list">
-<li>Motor WEG: o mesmo que roda anos em chão de fábrica sem parar</li>
-<li>Consumo de apenas 200W: liga na tomada comum, sem obra</li>
-<li>Sem gás refrigerante: nada de recarga nem técnico especializado</li>
-<li>Manutenção que você mesmo faz, com custo de centavos</li>
-</ul>
-</div>
-<div class="diff-visual">
-<img src="climatizadores-fotos/45L-04.jpg" alt="Climatizador Chiller Peças 45L - detalhe do motor WEG de alta eficiência" loading="lazy" width="600" height="450">
-</div>
-</div>
-</div>
+<!-- ===== SIMULAÇÃO DE AR ===== -->
+<section class="sec-pad" style="background:var(--bg-alt)">
+  <div class="container center">
+    <span class="eyebrow reveal">Veja o ar circulando</span>
+    <h2 class="reveal">Puxa o ar quente, devolve o ar fresco</h2>
+    <p class="lead reveal">O climatizador suga o ar quente e seco, resfria na água e devolve um ar fresco e limpo pelas aletas. Simples, natural e sem gás.</p>
+    <div class="sim reveal">
+      <div class="heat"></div>
+      <div class="cold"></div>
+      <div class="zone zhot"><svg><use href="#i-fire"/></svg> AR QUENTE ENTRA</div>
+      <div class="zone zcool"><svg><use href="#i-snow"/></svg> AR FRESCO SAI</div>
+      <div class="temp thot">38°C</div>
+      <div class="temp tcool">24°C</div>
+      <img class="prod" src="climatizadores-fotos/70L-06.png" alt="Climatizador evaporativo Chiller Peças puxando ar quente e devolvendo ar fresco">
+    </div>
+  </div>
+</section>
+
+<!-- ===== ECONOMIA (gauge comparativo) ===== -->
+<section class="sec-pad econ" id="economia">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--orange)">A conta que faz sentido</span>
+      <h2>O mesmo frescor por uma fração da conta de luz</h2>
+      <p class="lead">O climatizador consome cerca de <strong>200W</strong>, o mesmo que uma lâmpada potente. Um ar-condicionado de porte parecido puxa perto de <strong>2.000W</strong>. Ligado o dia inteiro, é a diferença entre uma conta que assusta e uma que você nem sente.</p>
+      <ul>
+        <li><svg><use href="#i-check"/></svg> Liga na tomada comum, sem obra, sem quebra-quebra</li>
+        <li><svg><use href="#i-check"/></svg> Sem gás refrigerante, nada de recarga nem técnico</li>
+        <li><svg><use href="#i-check"/></svg> Renova o ar e umidifica, não resseca como o ar-condicionado</li>
+        <li><svg><use href="#i-check"/></svg> Manutenção simples, que você mesmo faz</li>
+      </ul>
+    </div>
+    <div class="gauge reveal">
+      <div class="row">
+        <div class="card cool"><div class="big">~200W</div><small>Climatizador</small></div>
+        <div class="x">VS</div>
+        <div class="card warm"><div class="big">~2.000W</div><small>Ar-condicionado</small></div>
+      </div>
+      <div class="barwrap">
+        <div class="lab"><span>Climatizador evaporativo</span><span>baixíssimo</span></div>
+        <div class="bar a"><span></span></div>
+        <div class="lab"><span>Ar-condicionado equivalente</span><span>alto</span></div>
+        <div class="bar b"><span></span></div>
+      </div>
+      <p style="text-align:center;color:rgba(255,255,255,.8);font-size:.9rem">Economia que chega a <strong style="color:var(--orange)">90%</strong> e aparece já na primeira fatura.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ===== MODELOS (cards from LP4) ===== -->
@@ -1112,6 +1242,41 @@ Quero um orçamento sem compromisso
   </div>
 </section>
 
+<!-- ===== DUELO (Climatizador x Ar-condicionado) ===== -->
+<section class="sec-pad" style="background:var(--bg-alt)">
+  <div class="container center">
+    <span class="eyebrow reveal">O duelo que decide</span>
+    <h2 class="reveal">Climatizador x Ar-condicionado</h2>
+    <p class="lead reveal">O mesmo frescor, sem a conta de luz que assusta nem a obra que atrapalha. Veja lado a lado.</p>
+    <div class="duel reveal">
+      <div class="side win">
+        <div class="fade-img" style="background-image:url('climatizadores-fotos/carr05.png')" aria-hidden="true"></div>
+        <div class="head"><span class="ic">✓</span> CLIMATIZADOR</div>
+        <div class="kick">É só ligar na tomada.</div>
+        <div class="body">
+          <div class="li"><span class="ic">✓</span> Consome ~200W, o mesmo que uma lâmpada</div>
+          <div class="li"><span class="ic">✓</span> Centavos por hora de uso</div>
+          <div class="li"><span class="ic">✓</span> Sem obra e sem técnico</div>
+          <div class="li"><span class="ic">✓</span> Funciona de portas e portões abertos</div>
+        </div>
+      </div>
+      <div class="mid"><div class="vs">VS</div></div>
+      <div class="side lose">
+        <div class="fade-img" style="background-image:url('climatizadores-fotos/instalador-de-ar-condicionado.webp')" aria-hidden="true"></div>
+        <div class="head"><span class="ic">✕</span> AR-CONDICIONADO</div>
+        <div class="kick">Precisa de obra e técnico.</div>
+        <div class="body">
+          <div class="li"><span class="ic">✕</span> Consome perto de 2.000W</div>
+          <div class="li"><span class="ic">✕</span> Caro ligado o dia todo</div>
+          <div class="li"><span class="ic">✕</span> Instalação, furos e transtorno</div>
+          <div class="li"><span class="ic">✕</span> Só funciona em ambiente fechado</div>
+        </div>
+      </div>
+    </div>
+    <div class="duel-foot reveal">Até 90% mais barato na conta de luz, todo mês.</div>
+  </div>
+</section>
+
 <!-- ===== APLICAÇÕES (from LP5) ===== -->
 <section class="aplicacoes-section" id="aplicacoes">
   <div class="container">
@@ -1121,31 +1286,23 @@ Quero um orçamento sem compromisso
 
     <div class="aplicacoes-grid">
       <div class="aplicacao-card reveal">
-        <img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador evaporativo Chiller Peças em galpão industrial" loading="lazy" width="600" height="400">
+        <img src="climatizadores-fotos/carr02.png" alt="Climatizador evaporativo Chiller Peças em oficina mecânica" loading="lazy" width="600" height="400">
         <div class="aplicacao-overlay">
-          <span class="aplicacao-tag">Industrial</span>
-          <span class="aplicacao-name">Galpões e fábricas</span>
-          <span class="aplicacao-spec">Modelo recomendado: Duplo</span>
-        </div>
-      </div>
-      <div class="aplicacao-card reveal">
-        <img src="climatizadores-fotos/70L-02.jpg" alt="Climatizador evaporativo Chiller Peças 70L em restaurante" loading="lazy" width="600" height="400">
-        <div class="aplicacao-overlay">
-          <span class="aplicacao-tag">Comercial</span>
-          <span class="aplicacao-name">Restaurantes e bares</span>
+          <span class="aplicacao-tag">Automotivo</span>
+          <span class="aplicacao-name">Oficinas mecânicas</span>
           <span class="aplicacao-spec">Modelo recomendado: 70L</span>
         </div>
       </div>
       <div class="aplicacao-card reveal">
-        <img src="climatizadores-fotos/70L-03.jpg" alt="Climatizador evaporativo Chiller Peças 70L em academia" loading="lazy" width="600" height="400">
+        <img src="climatizadores-fotos/45L-02.jpg" alt="Climatizador evaporativo Chiller Peças 45L em restaurante" loading="lazy" width="600" height="400">
         <div class="aplicacao-overlay">
-          <span class="aplicacao-tag">Esportivo</span>
-          <span class="aplicacao-name">Academias e quadras</span>
-          <span class="aplicacao-spec">Modelo recomendado: Duplo</span>
+          <span class="aplicacao-tag">Comercial</span>
+          <span class="aplicacao-name">Restaurantes e bares</span>
+          <span class="aplicacao-spec">Modelo recomendado: 45L</span>
         </div>
       </div>
       <div class="aplicacao-card reveal">
-        <img src="climatizadores-fotos/45L-04.jpg" alt="Climatizador evaporativo Chiller Peças 45L em escritório" loading="lazy" width="600" height="400">
+        <img src="climatizadores-fotos/carr07.png" alt="Climatizador evaporativo Chiller Peças em recepção corporativa" loading="lazy" width="600" height="400">
         <div class="aplicacao-overlay">
           <span class="aplicacao-tag">Corporativo</span>
           <span class="aplicacao-name">Escritórios e coworkings</span>
@@ -1153,7 +1310,15 @@ Quero um orçamento sem compromisso
         </div>
       </div>
       <div class="aplicacao-card reveal">
-        <img src="climatizadores-fotos/70L-05.jpg" alt="Climatizador evaporativo Chiller Peças 70L em evento" loading="lazy" width="600" height="400">
+        <img src="climatizadores-fotos/carr01.png" alt="Climatizador evaporativo Chiller Peças em igreja" loading="lazy" width="600" height="400">
+        <div class="aplicacao-overlay">
+          <span class="aplicacao-tag">Religioso</span>
+          <span class="aplicacao-name">Igrejas e celebrações</span>
+          <span class="aplicacao-spec">Modelo recomendado: 70L</span>
+        </div>
+      </div>
+      <div class="aplicacao-card reveal">
+        <img src="climatizadores-fotos/carr03.png" alt="Climatizador evaporativo Chiller Peças Duplo em feira de exposição" loading="lazy" width="600" height="400">
         <div class="aplicacao-overlay">
           <span class="aplicacao-tag">Eventos</span>
           <span class="aplicacao-name">Feiras e exposições</span>
@@ -1161,7 +1326,7 @@ Quero um orçamento sem compromisso
         </div>
       </div>
       <div class="aplicacao-card reveal">
-        <img src="climatizadores-fotos/100L-04.jpg" alt="Climatizador evaporativo Chiller Peças em armazém" loading="lazy" width="600" height="400">
+        <img src="climatizadores-fotos/carr04.png" alt="Climatizador evaporativo Chiller Peças Duplo em armazém" loading="lazy" width="600" height="400">
         <div class="aplicacao-overlay">
           <span class="aplicacao-tag">Logística</span>
           <span class="aplicacao-name">Armazéns e depósitos</span>
@@ -1197,6 +1362,18 @@ Quero um orçamento sem compromisso
         <div class="social-author">Carlos Eduardo</div>
         <div class="social-role">Coordenador de manutenção, distribuidora em Goiânia/GO</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VÍDEO INSTITUCIONAL ===== -->
+<section class="sec-pad video-sec">
+  <div class="container center">
+    <span class="eyebrow reveal">Conheça a empresa</span>
+    <h2 class="reveal">Quem é a Chiller Peças</h2>
+    <p class="lead reveal">Assista ao vídeo institucional e conheça quem está por trás da climatização do seu negócio.</p>
+    <div class="video-frame reveal">
+      <iframe src="https://www.youtube.com/embed/YOQBvnkWpws?rel=0" title="Chiller Peças: Somos a agilidade por trás da refrigeração!" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -1533,54 +1710,42 @@ Quero um orçamento sem compromisso
   window.addEventListener('scroll', checkSticky, {passive: true});
   window.addEventListener('resize', checkSticky);
 
-  // ── Intersection Observer for reveals ──
+  // ── Intersection Observer for reveals (sempre anima) ──
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (!prefersReduced) {
-    const revealObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
-
-    document.querySelectorAll('.reveal, .slide-right').forEach(function(el) {
-      revealObserver.observe(el);
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
     });
-  } else {
-    document.querySelectorAll('.reveal, .slide-right').forEach(function(el) {
-      el.classList.add('visible');
-    });
-  }
+  }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
 
-  // ── Count-up animation ──
+  document.querySelectorAll('.reveal, .slide-right').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ── Count-up animation (sempre anima) ──
   var countEls = document.querySelectorAll('[data-count]');
-  if (prefersReduced) {
-    countEls.forEach(function(el) {
-      el.textContent = parseInt(el.getAttribute('data-count'), 10).toLocaleString('pt-BR');
+  var countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var duration = 1200;
+      var start = performance.now();
+      function tick(now) {
+        var progress = Math.min((now - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased).toLocaleString('pt-BR');
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      countObserver.unobserve(el);
     });
-  } else {
-    var countObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (!entry.isIntersecting) return;
-        var el = entry.target;
-        var target = parseInt(el.getAttribute('data-count'), 10);
-        var duration = 1200;
-        var start = performance.now();
-        function tick(now) {
-          var progress = Math.min((now - start) / duration, 1);
-          var eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.round(target * eased).toLocaleString('pt-BR');
-          if (progress < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-        countObserver.unobserve(el);
-      });
-    }, {threshold: 0.5});
-    countEls.forEach(function(el) { countObserver.observe(el); });
-  }
+  }, {threshold: 0.5});
+  countEls.forEach(function(el) { countObserver.observe(el); });
 
   // ── Count-up for .count-up[data-target] (90% economia block) ──
   var countUpEls = document.querySelectorAll('.count-up[data-target]');
@@ -1633,6 +1798,43 @@ Quero um orçamento sem compromisso
   }
 
   // Note: Form submit handler is now managed by the tracking system above
+})();
+</script>
+
+<!-- ===== JS DOS BLOCOS EXTRA (STATS + SIMULAÇÃO) ===== -->
+<script>
+(function(){
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // STATS — contagem animada (usa data-stat/data-suffix/data-text)
+  function animateStat(el){
+    if(el.dataset.done) return; el.dataset.done = 1;
+    var target = +el.dataset.stat, suffix = el.dataset.suffix || '', txt = el.dataset.text;
+    if(txt && target === 0){ el.textContent = txt; return; }
+    var dur = 1400, t0 = performance.now();
+    function tick(now){
+      var p = Math.min((now - t0) / dur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      var v = Math.round(target * e);
+      el.textContent = (target >= 1000 ? v.toLocaleString('pt-BR') : v) + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var statsWrap = document.querySelector('.stats .container');
+  if(statsWrap){
+    var so = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ e.target.querySelectorAll('[data-stat]').forEach(animateStat); so.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    so.observe(statsWrap);
+  }
+
+  // SIMULAÇÃO — gera os streaks de ar (sempre)
+  var sim = document.querySelector('.sim');
+  if(sim){
+    for(var i=0;i<10;i++){ var d=document.createElement('div'); d.className='s hot'; d.style.cssText='left:4%;top:'+(12+i*8)+'%;width:'+(34+Math.random()*26)+'px;animation:hin '+(1.6+Math.random()*0.7)+'s linear '+(i*0.16)+'s infinite'; sim.appendChild(d); }
+    for(var j=0;j<12;j++){ var c=document.createElement('div'); c.className='s cool'; c.style.cssText='left:60%;top:'+(10+j*7)+'%;width:'+(34+Math.random()*30)+'px;animation:cout '+(1.6+Math.random()*0.7)+'s linear '+(j*0.14)+'s infinite'; sim.appendChild(c); }
+  }
 })();
 </script>
 </body>
