@@ -690,6 +690,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .comparison tbody tr:hover{background:#f5f5f5}
 .comparison tbody td:first-child{font-weight:600;color:var(--text)}
 .comparison .highlight-col{background:#f5f5f5}
+.compare-mobile{display:none}
+@media(max-width:767px){
+  .table-wrap{display:none}
+  .compare-mobile{display:grid;gap:1rem}
+  .compare-card{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:1.1rem 1.25rem}
+  .compare-card h3{font-family:var(--font-heading);font-weight:400;font-size:1.1rem;color:var(--blue);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:0.1rem}
+  .compare-card li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:0.85rem;padding:0.5rem 0;border-bottom:1px solid #f0f0f0}
+  .compare-card li:last-child{border-bottom:none}
+  .compare-card li span{color:var(--text-muted)}
+  .compare-card li strong{color:var(--text);font-weight:600;text-align:right}
+}
+@media(min-width:768px){.compare-mobile{display:none !important}}
 
 /* ── APLICACOES SECTION (from LP5) ── */
 .aplicacoes-section{padding:clamp(3rem,6vw,6rem) 0}
@@ -1238,6 +1251,52 @@ Quero um orçamento sem compromisso
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- Versão mobile em cards (sem scroll lateral) -->
+    <div class="compare-mobile">
+      <div class="compare-card">
+        <h3>45L</h3>
+        <ul>
+          <li><span>Reservatório</span><strong>45 litros</strong></li>
+          <li><span>Vazão de ar</span><strong>3.500 m³/h</strong></li>
+          <li><span>Área recomendada</span><strong>Até 35 m²</strong></li>
+          <li><span>Consumo</span><strong>200W</strong></li>
+          <li><span>Ventiladores</span><strong>1</strong></li>
+          <li><span>Velocidades</span><strong>3</strong></li>
+          <li><span>Voltagem</span><strong>110V / 220V</strong></li>
+          <li><span>Rodízios</span><strong>Sim</strong></li>
+          <li><span>Ideal para</span><strong>Residências, lojas pequenas</strong></li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h3>70L <span class="badge-popular">Mais procurado</span></h3>
+        <ul>
+          <li><span>Reservatório</span><strong>70 litros</strong></li>
+          <li><span>Vazão de ar</span><strong>5.500 m³/h</strong></li>
+          <li><span>Área recomendada</span><strong>40 a 60 m²</strong></li>
+          <li><span>Consumo</span><strong>230W</strong></li>
+          <li><span>Ventiladores</span><strong>1</strong></li>
+          <li><span>Velocidades</span><strong>3</strong></li>
+          <li><span>Voltagem</span><strong>220V</strong></li>
+          <li><span>Rodízios</span><strong>Sim</strong></li>
+          <li><span>Ideal para</span><strong>Restaurantes, escritórios, igrejas</strong></li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h3>Duplo</h3>
+        <ul>
+          <li><span>Reservatório</span><strong>150 litros</strong></li>
+          <li><span>Vazão de ar</span><strong>15.000 m³/h</strong></li>
+          <li><span>Área recomendada</span><strong>80 a 150 m²</strong></li>
+          <li><span>Consumo</span><strong>560W</strong></li>
+          <li><span>Ventiladores</span><strong>2</strong></li>
+          <li><span>Velocidades</span><strong>3</strong></li>
+          <li><span>Voltagem</span><strong>220V</strong></li>
+          <li><span>Rodízios</span><strong>Sim</strong></li>
+          <li><span>Ideal para</span><strong>Indústrias, gráficas, galpões</strong></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
