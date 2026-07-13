@@ -707,7 +707,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 /* ── APLICACOES SECTION (from LP5) ── */
 .aplicacoes-section{padding:clamp(3rem,6vw,6rem) 0}
 .aplicacoes-section h2{margin-bottom:0.5rem}
-.aplicacoes-intro{color:var(--text-muted);margin-bottom:2.5rem}
+.aplicacoes-intro{color:var(--text-muted);margin-bottom:2.5rem;max-width:none;text-align:justify;text-align-last:left}
 .aplicacoes-grid{display:grid;gap:1rem}
 @media(min-width:600px){.aplicacoes-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.aplicacoes-grid{grid-template-columns:repeat(3,1fr)}}
@@ -749,7 +749,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .cta-subtitle{color:#a3d5ef;margin-bottom:2.5rem}
 .cta-layout{display:grid;gap:2.5rem}
 @media(min-width:768px){.cta-layout{grid-template-columns:1fr 1fr;gap:3rem}}
-.cta-whatsapp-block{display:flex;flex-direction:column;justify-content:center}
+.cta-whatsapp-block{display:flex;flex-direction:column;justify-content:space-between}
+.cta-whatsapp-action{display:flex;flex-direction:column;gap:0.75rem}
 .cta-whatsapp-block p{color:#a3d5ef;margin-bottom:1.5rem;font-size:1.05rem}
 .cta-helper{font-size:0.88rem;color:rgba(255,255,255,0.6);margin-top:0.75rem;max-width:42ch;font-style:italic}
 .cta-form{background:rgba(12,125,204,0.3);border-radius:10px;padding:2rem;border:1px solid rgba(16,139,209,0.3)}
@@ -871,6 +872,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .video-sec{background:var(--bg-alt)}
 .video-frame{position:relative;max-width:920px;margin:40px auto 0;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(8,91,167,.20);background:#04121e}
 .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+
+/* CTA extra + animação de destaque (pulso) */
+.cta-block-wrap{margin-top:clamp(24px,4vw,40px);text-align:center}
+@keyframes ctaPulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}
+  70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+.cta-pulse{animation:ctaPulse 2.2s cubic-bezier(.4,0,.6,1) infinite}
 </style>
 
 <!-- Google Tag Manager -->
@@ -919,7 +929,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     <div class="header-cta-wrap">
       <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp" data-cta="header-whatsapp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Quero orçamento
+        Comprar Agora
       </a>
     </div>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -961,7 +971,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       <div class="hero-cta-group">
         <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa" target="_blank" rel="noopener" data-cta="hero-whatsapp">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Quero economizar até 90%
+          Quero comprar um climatizador
         </a>
       </div>
     </div>
@@ -1012,11 +1022,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <h2 class="hero-headline" style="margin:0;">Mais de <span data-count="2000" style="color:#ff901c">0</span> empresas já trocaram o ar-condicionado.</h2>
 <p class="hero-sub" style="margin:0;">Elas não abriram mão do conforto, só pararam de pagar caro por ele. Motor WEG, certificação INMETRO e economia que aparece já na primeira fatura.</p>
 <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-primary" data-cta="diferenciais-whatsapp" target="_blank" rel="noopener" style="align-self:flex-start;">
-<svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 Quero um orçamento sem compromisso
 </a>
 </div>
-<img src="climatizadores-fotos/ambientado.png" alt="Climatizadores Chiller Peças em ambientes comerciais" loading="lazy" style="width:100%;max-height:280px;object-fit:cover;border-radius:12px;">
+<img src="climatizadores-fotos/800x400.svg" alt="Climatizadores Chiller Peças em ambiente de restaurante" loading="lazy" style="width:100%;max-height:280px;object-fit:cover;border-radius:12px;">
 </div>
 
 <div class="install-strip" role="list" aria-label="Instalações realizadas">
@@ -1129,14 +1139,20 @@ Quero um orçamento sem compromisso
       </div>
       <p style="text-align:center;color:rgba(255,255,255,.8);font-size:.9rem">Economia que chega a <strong style="color:var(--orange)">90%</strong> e aparece já na primeira fatura.</p>
     </div>
+    <div class="cta-block-wrap reveal" style="grid-column:1/-1">
+      <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-primary cta-pulse" data-cta="economia-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Comprar sem burocracia
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ===== MODELOS (cards from LP4) ===== -->
 <section class="diff-section models-section" id="modelos">
 <div class="container">
-<p class="diff-label" style="text-align:center;margin-bottom:8px;font-size:16px;letter-spacing:0.08em">Modelos Disponíveis</p>
-<h2 class="diff-title" style="text-align:center;max-width:22ch;margin:0 auto clamp(28px,4vw,48px);font-size:clamp(28px,4.5vw,44px)">Qual o tamanho do seu ambiente?</h2>
+<h2 class="diff-title" style="text-align:center;max-width:none;margin:0 auto 10px;font-size:clamp(19px,4.6vw,44px)">Qual o tamanho do seu ambiente?</h2>
+<p style="text-align:center;color:var(--text-muted);font-size:0.95rem;margin:0 auto clamp(28px,4vw,48px)">Temos o modelo ideal para você</p>
 
 <div class="models-grid">
 <article class="model-card reveal">
@@ -1149,7 +1165,7 @@ Quero um orçamento sem compromisso
 <li><span>Potência</span><strong>160W</strong></li>
 <li><span>Motor</span><strong>WEG</strong></li>
 </ul>
-<a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%2045L" class="cta-model" data-cta="modelo-45l-whatsapp" target="_blank" rel="noopener">Cotar este modelo</a>
+<a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%2045L" class="cta-model" data-cta="modelo-45l-whatsapp" target="_blank" rel="noopener">Comprar esse modelo</a>
 </article>
 <article class="model-card reveal">
 <span class="model-badge">Mais procurado</span>
@@ -1162,7 +1178,7 @@ Quero um orçamento sem compromisso
 <li><span>Potência</span><strong>200W</strong></li>
 <li><span>Motor</span><strong>WEG</strong></li>
 </ul>
-<a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%2070L" class="cta-model" data-cta="modelo-70l-whatsapp" target="_blank" rel="noopener">Cotar este modelo</a>
+<a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%2070L" class="cta-model" data-cta="modelo-70l-whatsapp" target="_blank" rel="noopener">Comprar esse modelo</a>
 </article>
 <article class="model-card reveal">
 <img src="climatizadores-fotos/100L-04.jpg" alt="Climatizador Evaporativo Portátil Chiller Peças Duplo" loading="lazy" width="200" height="200">
@@ -1174,7 +1190,7 @@ Quero um orçamento sem compromisso
 <li><span>Potência</span><strong>450W</strong></li>
 <li><span>Motor</span><strong>2x WEG</strong></li>
 </ul>
-<a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%20Duplo" class="cta-model" data-cta="modelo-duplo-whatsapp" target="_blank" rel="noopener">Cotar este modelo</a>
+<a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20cotar%20o%20Climatizador%20Duplo" class="cta-model" data-cta="modelo-duplo-whatsapp" target="_blank" rel="noopener">Comprar esse modelo</a>
 </article>
 </div>
 </div>
@@ -1298,6 +1314,13 @@ Quero um orçamento sem compromisso
         </ul>
       </div>
     </div>
+
+    <div class="cta-block-wrap reveal">
+      <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20ajuda%20para%20escolher%20o%20climatizador%20ideal" class="cta-wa cta-pulse" data-cta="comparacao-whatsapp" target="_blank" rel="noopener" style="justify-content:center">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Ainda com dúvida? Fale com um especialista
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1333,6 +1356,12 @@ Quero um orçamento sem compromisso
       </div>
     </div>
     <div class="duel-foot reveal">Até 90% mais barato na conta de luz, todo mês.</div>
+    <div class="cta-block-wrap reveal">
+      <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa cta-pulse" data-cta="duelo-whatsapp" target="_blank" rel="noopener" style="justify-content:center">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Comprar climatizador agora
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1393,6 +1422,13 @@ Quero um orçamento sem compromisso
         </div>
       </div>
     </div>
+
+    <div class="cta-block-wrap reveal">
+      <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="cta-wa cta-pulse" data-cta="aplicacoes-whatsapp" target="_blank" rel="noopener" style="justify-content:center">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Encontre o modelo para o seu ambiente
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1440,17 +1476,21 @@ Quero um orçamento sem compromisso
 <!-- ===== CTA FINAL (from LP5) ===== -->
 <section class="cta-section" id="contato">
   <div class="container">
-    <div class="section-label section-label-light reveal">Contato</div>
-    <h2 class="reveal">Ainda em dúvida entre 45L, 70L ou Duplo?</h2>
-    <p class="cta-subtitle reveal">Não arrisque comprar o modelo errado. Diga o tamanho do seu espaço e nós indicamos o climatizador certo, sem custo e sem compromisso.</p>
     <div class="cta-layout">
       <div class="cta-whatsapp-block reveal">
-        <p>Me chame no WhatsApp com o tamanho aproximado do ambiente. Em minutos você recebe a recomendação exata e o valor, direto com quem entende do produto.</p>
-        <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="btn-primary" target="_blank" rel="noopener noreferrer" style="width:fit-content" data-cta="cta-final-whatsapp">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Falar com um especialista agora
-        </a>
-        <p class="cta-helper">Resposta rápida em horário comercial. Você fala com um especialista, não com robô.</p>
+        <div class="cta-whatsapp-intro">
+          <div class="section-label section-label-light">Contato</div>
+          <h2>Ainda em dúvida entre 45L, 70L ou Duplo?</h2>
+          <p class="cta-subtitle">Não arrisque comprar o modelo errado. Diga o tamanho do seu espaço e nós indicamos o climatizador certo, sem custo e sem compromisso.</p>
+          <p>Me chame no WhatsApp com o tamanho aproximado do ambiente. Em minutos você recebe a recomendação exata e o valor, direto com quem entende do produto.</p>
+        </div>
+        <div class="cta-whatsapp-action">
+          <a href="https://wa.me/5511940518767?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20climatizadores%20Chiller%20Pe%C3%A7as" class="btn-primary" target="_blank" rel="noopener noreferrer" style="width:fit-content" data-cta="cta-final-whatsapp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar com um especialista agora
+          </a>
+          <p class="cta-helper">Resposta rápida em horário comercial. Você fala com um especialista, não com robô.</p>
+        </div>
       </div>
       <form class="cta-form reveal" id="contact-form">
         <label for="form-nome">Nome</label>
